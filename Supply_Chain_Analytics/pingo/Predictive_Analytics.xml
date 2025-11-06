@@ -1,58 +1,152 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version='1.0' encoding='utf-8'?>
 <quiz>
-  <question type="category">
-    <category>
-      <text>AI_ML_Topics/Predictive Analytics – Demand Forecast</text>
-    </category>
+  <question type="multichoice">
+    <name><text>Q11. Promotion frequency and accuracy</text></name>
+    <questiontext format="moodle_auto_format">
+      <text>Increasing promotion frequency from 0.2 to 0.4 affects forecast accuracy how?</text>
+    </questiontext>
+    <generalfeedback format="moodle_auto_format"><text /></generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>Improves accuracy</text>
+      <feedback format="moodle_auto_format"><text>Try again.</text></feedback>
+    </answer>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>Reduces accuracy due to variability</text>
+      <feedback format="moodle_auto_format"><text>Correct: More promos add volatility that models struggle to capture perfectly.</text></feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>No change</text>
+      <feedback format="moodle_auto_format"><text>Try again.</text></feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>Makes R² = 1.0</text>
+      <feedback format="moodle_auto_format"><text>Try again.</text></feedback>
+    </answer>
   </question>
 
   <question type="multichoice">
-    <name><text>Q11. Promotion frequency impact</text></name>
-    <questiontext><text>Increasing promotion frequency from 0.2 to 0.4 affects forecast accuracy how?</text></questiontext>
-    <answer fraction="0"><text>Improves accuracy</text></answer>
-    <answer fraction="100"><text>Reduces accuracy due to variability</text></answer>
-    <answer fraction="0"><text>No change</text></answer>
-    <answer fraction="0"><text>Makes R² = 1.0</text></answer>
-    <feedback><text>Correct: Frequent promotions introduce volatility and noise.</text></feedback>
+    <name><text>Q12. Removing Lag1 feature</text></name>
+    <questiontext format="moodle_auto_format">
+      <text>Removing the Lag1 feature from the model will:</text>
+    </questiontext>
+    <generalfeedback format="moodle_auto_format"><text /></generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>Reduce predictive power</text>
+      <feedback format="moodle_auto_format"><text>Correct: Lag features encode autocorrelation essential for time series prediction.</text></feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>Increase forecast stability</text>
+      <feedback format="moodle_auto_format"><text>Try again.</text></feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>Not affect results</text>
+      <feedback format="moodle_auto_format"><text>Try again.</text></feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>Lower runtime only</text>
+      <feedback format="moodle_auto_format"><text>Try again.</text></feedback>
+    </answer>
   </question>
 
   <question type="multichoice">
-    <name><text>Q12. Removing lag feature</text></name>
-    <questiontext><text>Removing the Lag1 feature from the model will:</text></questiontext>
-    <answer fraction="100"><text>Reduce predictive power</text></answer>
-    <answer fraction="0"><text>Increase forecast stability</text></answer>
-    <answer fraction="0"><text>Not affect results</text></answer>
-    <answer fraction="0"><text>Lower runtime only</text></answer>
-    <feedback><text>Correct: Lag variables capture temporal dependencies essential for forecasts.</text></feedback>
+    <name><text>Q13. Noise and coefficients</text></name>
+    <questiontext format="moodle_auto_format">
+      <text>Adding random ±20 noise to demand data causes:</text>
+    </questiontext>
+    <generalfeedback format="moodle_auto_format"><text /></generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>Model coefficients to remain stable</text>
+      <feedback format="moodle_auto_format"><text>Try again.</text></feedback>
+    </answer>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>Model coefficients to fluctuate more</text>
+      <feedback format="moodle_auto_format"><text>Correct: Exogenous noise lowers coefficient stability and increases error spread.</text></feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>Error to decrease</text>
+      <feedback format="moodle_auto_format"><text>Try again.</text></feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>No impact on MAE</text>
+      <feedback format="moodle_auto_format"><text>Try again.</text></feedback>
+    </answer>
   </question>
 
   <question type="multichoice">
-    <name><text>Q13. Noise injection impact</text></name>
-    <questiontext><text>Adding random ±20 noise to demand data causes:</text></questiontext>
-    <answer fraction="0"><text>Model coefficients to remain stable</text></answer>
-    <answer fraction="100"><text>Model coefficients to fluctuate more</text></answer>
-    <answer fraction="0"><text>Error to decrease</text></answer>
-    <answer fraction="0"><text>No impact on MAE</text></answer>
-    <feedback><text>Correct: Noise reduces consistency of model coefficients.</text></feedback>
+    <name><text>Q14. Weekend feature</text></name>
+    <questiontext format="moodle_auto_format">
+      <text>Adding an IsWeekend variable to the model will likely:</text>
+    </questiontext>
+    <generalfeedback format="moodle_auto_format"><text /></generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>Improve MAE slightly</text>
+      <feedback format="moodle_auto_format"><text>Correct: Capturing weekday/weekend patterns yields modest accuracy gains.</text></feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>Worsen R² drastically</text>
+      <feedback format="moodle_auto_format"><text>Try again.</text></feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>Remove multicollinearity</text>
+      <feedback format="moodle_auto_format"><text>Try again.</text></feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>Have no measurable impact</text>
+      <feedback format="moodle_auto_format"><text>Try again.</text></feedback>
+    </answer>
   </question>
 
   <question type="multichoice">
-    <name><text>Q14. Adding weekend feature</text></name>
-    <questiontext><text>Adding an IsWeekend variable to the model will likely:</text></questiontext>
-    <answer fraction="100"><text>Improve MAE slightly</text></answer>
-    <answer fraction="0"><text>Worsen R² drastically</text></answer>
-    <answer fraction="0"><text>Remove multicollinearity</text></answer>
-    <answer fraction="0"><text>Have no measurable impact</text></answer>
-    <feedback><text>Correct: Weekend patterns modestly improve accuracy.</text></feedback>
-  </question>
-
-  <question type="multichoice">
-    <name><text>Q15. Promotion uplift</text></name>
-    <questiontext><text>When comparing forecasts with and without promotion, the demand uplift is expected to be:</text></questiontext>
-    <answer fraction="0"><text>Negligible</text></answer>
-    <answer fraction="100"><text>Moderate (approx. +50 units)</text></answer>
-    <answer fraction="0"><text>Negative</text></answer>
-    <answer fraction="0"><text>Inconsistent across all days</text></answer>
-    <feedback><text>Correct: Promotion yields a steady moderate uplift in demand.</text></feedback>
+    <name><text>Q15. Promotion uplift magnitude</text></name>
+    <questiontext format="moodle_auto_format">
+      <text>When comparing forecasts with and without promotion, the demand uplift is expected to be:</text>
+    </questiontext>
+    <generalfeedback format="moodle_auto_format"><text /></generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>Negligible</text>
+      <feedback format="moodle_auto_format"><text>Try again.</text></feedback>
+    </answer>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>Moderate (approx. +50 units)</text>
+      <feedback format="moodle_auto_format"><text>Correct: Promotions generally create a consistent moderate uplift in demand levels.</text></feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>Negative</text>
+      <feedback format="moodle_auto_format"><text>Try again.</text></feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>Inconsistent across all days</text>
+      <feedback format="moodle_auto_format"><text>Try again.</text></feedback>
+    </answer>
   </question>
 </quiz>
