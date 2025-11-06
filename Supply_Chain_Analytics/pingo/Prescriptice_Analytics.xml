@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quiz>
+  <question type="category">
+    <category>
+      <text>AI_ML_Topics/Prescriptive Analytics – Transportation Optimization</text>
+    </category>
+  </question>
+
+  <question type="multichoice">
+    <name><text>Q16. DC_East capacity reduction</text></name>
+    <questiontext><text>Reducing DC_East capacity from 600 to 500 affects total cost how?</text></questiontext>
+    <answer fraction="0"><text>Cost decreases</text></answer>
+    <answer fraction="100"><text>Cost increases moderately</text></answer>
+    <answer fraction="0"><text>No change</text></answer>
+    <answer fraction="0"><text>Cost drops sharply</text></answer>
+    <feedback><text>Correct: Reduced capacity forces costlier allocations.</text></feedback>
+  </question>
+
+  <question type="multichoice">
+    <name><text>Q17. Demand rise effect</text></name>
+    <questiontext><text>When Store_C demand rises from 350 to 450 units, which DC will supply more?</text></questiontext>
+    <answer fraction="100"><text>DC_West</text></answer>
+    <answer fraction="0"><text>DC_East</text></answer>
+    <answer fraction="0"><text>DC_North</text></answer>
+    <answer fraction="0"><text>None; demand unmet</text></answer>
+    <feedback><text>Correct: DC_West typically absorbs extra load due to proximity.</text></feedback>
+  </question>
+
+  <question type="multichoice">
+    <name><text>Q18. Cost increase for DC_West routes</text></name>
+    <questiontext><text>Adding +2 cost to all DC_West routes causes:</text></questiontext>
+    <answer fraction="0"><text>More shipments from DC_West</text></answer>
+    <answer fraction="100"><text>DC_West routes to reduce or become unused</text></answer>
+    <answer fraction="0"><text>Lower total cost</text></answer>
+    <answer fraction="0"><text>No effect</text></answer>
+    <feedback><text>Correct: Higher route cost shifts allocation to other DCs.</text></feedback>
+  </question>
+
+  <question type="multichoice">
+    <name><text>Q19. Adding DC_North</text></name>
+    <questiontext><text>Adding a new DC_North with 300 supply typically leads to:</text></questiontext>
+    <answer fraction="0"><text>Higher total cost</text></answer>
+    <answer fraction="100"><text>Lower total cost</text></answer>
+    <answer fraction="0"><text>More capacity unused</text></answer>
+    <answer fraction="0"><text>No difference</text></answer>
+    <feedback><text>Correct: Additional capacity improves optimization flexibility.</text></feedback>
+  </question>
+
+  <question type="multichoice">
+    <name><text>Q20. Limiting DC_West shipments</text></name>
+    <questiontext><text>Limiting DC_West total shipments to 400 units results in:</text></questiontext>
+    <answer fraction="0"><text>Unchanged objective cost</text></answer>
+    <answer fraction="100"><text>Slight cost increase due to constraint</text></answer>
+    <answer fraction="0"><text>Major cost decrease</text></answer>
+    <answer fraction="0"><text>Infeasible optimization</text></answer>
+    <feedback><text>Correct: Capacity constraints raise overall optimization cost slightly.</text></feedback>
+  </question>
+</quiz>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quiz>
+  <question type="category">
+    <category>
+      <text>AI_ML_Topics/Predictive Analytics – Demand Forecast</text>
+    </category>
+  </question>
+
+  <question type="multichoice">
+    <name><text>Q11. Promotion frequency impact</text></name>
+    <questiontext><text>Increasing promotion frequency from 0.2 to 0.4 affects forecast accuracy how?</text></questiontext>
+    <answer fraction="0"><text>Improves accuracy</text></answer>
+    <answer fraction="100"><text>Reduces accuracy due to variability</text></answer>
+    <answer fraction="0"><text>No change</text></answer>
+    <answer fraction="0"><text>Makes R² = 1.0</text></answer>
+    <feedback><text>Correct: Frequent promotions introduce volatility and noise.</text></feedback>
+  </question>
+
+  <question type="multichoice">
+    <name><text>Q12. Removing lag feature</text></name>
+    <questiontext><text>Removing the Lag1 feature from the model will:</text></questiontext>
+    <answer fraction="100"><text>Reduce predictive power</text></answer>
+    <answer fraction="0"><text>Increase forecast stability</text></answer>
+    <answer fraction="0"><text>Not affect results</text></answer>
+    <answer fraction="0"><text>Lower runtime only</text></answer>
+    <feedback><text>Correct: Lag variables capture temporal dependencies essential for forecasts.</text></feedback>
+  </question>
+
+  <question type="multichoice">
+    <name><text>Q13. Noise injection impact</text></name>
+    <questiontext><text>Adding random ±20 noise to demand data causes:</text></questiontext>
+    <answer fraction="0"><text>Model coefficients to remain stable</text></answer>
+    <answer fraction="100"><text>Model coefficients to fluctuate more</text></answer>
+    <answer fraction="0"><text>Error to decrease</text></answer>
+    <answer fraction="0"><text>No impact on MAE</text></answer>
+    <feedback><text>Correct: Noise reduces consistency of model coefficients.</text></feedback>
+  </question>
+
+  <question type="multichoice">
+    <name><text>Q14. Adding weekend feature</text></name>
+    <questiontext><text>Adding an IsWeekend variable to the model will likely:</text></questiontext>
+    <answer fraction="100"><text>Improve MAE slightly</text></answer>
+    <answer fraction="0"><text>Worsen R² drastically</text></answer>
+    <answer fraction="0"><text>Remove multicollinearity</text></answer>
+    <answer fraction="0"><text>Have no measurable impact</text></answer>
+    <feedback><text>Correct: Weekend patterns modestly improve accuracy.</text></feedback>
+  </question>
+
+  <question type="multichoice">
+    <name><text>Q15. Promotion uplift</text></name>
+    <questiontext><text>When comparing forecasts with and without promotion, the demand uplift is expected to be:</text></questiontext>
+    <answer fraction="0"><text>Negligible</text></answer>
+    <answer fraction="100"><text>Moderate (approx. +50 units)</text></answer>
+    <answer fraction="0"><text>Negative</text></answer>
+    <answer fraction="0"><text>Inconsistent across all days</text></answer>
+    <feedback><text>Correct: Promotion yields a steady moderate uplift in demand.</text></feedback>
+  </question>
+</quiz>
