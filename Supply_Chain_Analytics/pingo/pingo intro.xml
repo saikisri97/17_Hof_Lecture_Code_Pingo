@@ -1,0 +1,141 @@
+<quiz>
+  <question type="multichoice">
+    <name><text>Q1. How are you finding the German weather so far?</text></name>
+    <questiontext format="moodle_auto_format"><text>How are you finding the German weather so far?</text></questiontext>
+    <generalfeedback format="moodle_auto_format"><text /></generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>Love it – finally some fresh cool air.</text>
+      <feedback format="moodle_auto_format"><text>Nice! You’re enjoying the best part of German weather.</text></feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>Too cold, even my coffee freezes.</text>
+      <feedback format="moodle_auto_format"><text>Understandable! The cold can be a shock at first.</text></feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>It changes faster than my mood.</text>
+      <feedback format="moodle_auto_format"><text>Yes, four seasons in one day is pretty common here.</text></feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>Waiting for summer like it’s a miracle.</text>
+      <feedback format="moodle_auto_format"><text>True! Summer in Germany feels well-earned.</text></feedback>
+    </answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text>Q2. What’s your current favorite German food?</text></name>
+    <questiontext format="moodle_auto_format"><text>What’s your current favorite German food?</text></questiontext>
+    <generalfeedback format="moodle_auto_format"><text /></generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>Döner kebab – the universal student meal.</text>
+      <feedback format="moodle_auto_format"><text>Classic student choice – available everywhere!</text></feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>Bratwurst – still can’t pronounce it right.</text>
+      <feedback format="moodle_auto_format"><text>A must-try, even if the name takes practice.</text></feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>Pretzel and butter – breakfast of champions.</text>
+      <feedback format="moodle_auto_format"><text>Simple, tasty, and perfectly German.</text></feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>I miss home food already.</text>
+      <feedback format="moodle_auto_format"><text>Nothing beats home cooking! Hang in there.</text></feedback>
+    </answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text>Q3. What’s been your most “German” experience so far?</text></name>
+    <questiontext format="moodle_auto_format"><text>What’s been your most “German” experience so far?</text></questiontext>
+    <generalfeedback format="moodle_auto_format"><text /></generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>Crossing the street only on green.</text>
+      <feedback format="moodle_auto_format"><text>Yes! The German traffic discipline is legendary.</text></feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>Grocery stores closing at 8 PM sharp.</text>
+      <feedback format="moodle_auto_format"><text>True! Planning ahead becomes a skill.</text></feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>Saying “Mit Karte, bitte” at every counter.</text>
+      <feedback format="moodle_auto_format"><text>A modern German ritual – everyone’s favorite phrase.</text></feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>Sorting five different kinds of trash.</text>
+      <feedback format="moodle_auto_format"><text>Welcome to Germany’s recycling mastery!</text></feedback>
+    </answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text>Q4. How’s your German language journey going?</text></name>
+    <questiontext format="moodle_auto_format"><text>How’s your German language journey going?</text></questiontext>
+    <generalfeedback format="moodle_auto_format"><text /></generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>“Ich kann ein bisschen Deutsch!”</text>
+      <feedback format="moodle_auto_format"><text>Good start – confidence is key!</text></feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>I understand, but replying takes time.</text>
+      <feedback format="moodle_auto_format"><text>That’s how fluency builds, one sentence at a time.</text></feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>I just smile and nod – works every time.</text>
+      <feedback format="moodle_auto_format"><text>Universal survival skill – well played.</text></feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>Waiting for ChatGPT to translate everything.</text>
+      <feedback format="moodle_auto_format"><text>Fair enough! Technology to the rescue.</text></feedback>
+    </answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text>Q5. What do you like most about living in Germany so far?</text></name>
+    <questiontext format="moodle_auto_format"><text>What do you like most about living in Germany so far?</text></questiontext>
+    <generalfeedback format="moodle_auto_format"><text /></generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>Clean transport and punctual trains.</text>
+      <feedback format="moodle_auto_format"><text>German efficiency at its finest!</text></feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>Calm cities and green spaces.</text>
+      <feedback format="moodle_auto_format"><text>Peaceful and refreshing – great for study and life balance.</text></feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>Work–life balance and quiet Sundays.</text>
+      <feedback format="moodle_auto_format"><text>Exactly! Sundays in Germany are made for rest.</text></feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>Weekend travel to new places.</text>
+      <feedback format="moodle_auto_format"><text>Perfect way to explore and recharge.</text></feedback>
+    </answer>
+  </question>
+</quiz>
