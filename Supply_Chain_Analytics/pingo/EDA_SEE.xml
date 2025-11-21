@@ -1,0 +1,161 @@
+<quiz>
+  <question type="multichoice">
+    <name><text>Q1. Purpose of SEE Stage</text></name>
+    <questiontext format="moodle_auto_format"><text>What is the purpose of the SEE stage?</text></questiontext>
+    <generalfeedback format="moodle_auto_format"><text /></generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+
+    <answer fraction="0" format="moodle_auto_format">
+      <text>Modify the dataset</text>
+      <feedback format="moodle_auto_format"><text>Incorrect</text></feedback>
+    </answer>
+
+    <answer fraction="100" format="moodle_auto_format">
+      <text>Understand structure, patterns, and gaps</text>
+      <feedback format="moodle_auto_format"><text>Correct</text></feedback>
+    </answer>
+
+    <answer fraction="0" format="moodle_auto_format">
+      <text>Train models</text>
+      <feedback format="moodle_auto_format"><text>Incorrect</text></feedback>
+    </answer>
+
+    <answer fraction="0" format="moodle_auto_format">
+      <text>Remove outliers</text>
+      <feedback format="moodle_auto_format"><text>Incorrect</text></feedback>
+    </answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text>Q2. Data Type Check</text></name>
+    <questiontext format="moodle_auto_format"><text>Why do we check data types during SEE?</text></questiontext>
+    <generalfeedback format="moodle_auto_format"><text /></generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+
+    <answer fraction="0" format="moodle_auto_format">
+      <text>To compress the dataset</text>
+      <feedback format="moodle_auto_format"><text>Incorrect</text></feedback>
+    </answer>
+
+    <answer fraction="100" format="moodle_auto_format">
+      <text>To ensure columns behave correctly in KPIs</text>
+      <feedback format="moodle_auto_format"><text>Correct</text></feedback>
+    </answer>
+
+    <answer fraction="0" format="moodle_auto_format">
+      <text>To reduce memory</text>
+      <feedback format="moodle_auto_format"><text>Incorrect</text></feedback>
+    </answer>
+
+    <answer fraction="0" format="moodle_auto_format">
+      <text>To label rows</text>
+      <feedback format="moodle_auto_format"><text>Incorrect</text></feedback>
+    </answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text>Q3. Missing Arrival Timestamp</text></name>
+    <questiontext format="moodle_auto_format"><text>What does a missing arrival timestamp imply?</text></questiontext>
+    <generalfeedback format="moodle_auto_format"><text /></generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+
+    <answer fraction="0" format="moodle_auto_format">
+      <text>A forecasting issue</text>
+      <feedback format="moodle_auto_format"><text>Incorrect</text></feedback>
+    </answer>
+
+    <answer fraction="100" format="moodle_auto_format">
+      <text>A data-entry failure or missing scan</text>
+      <feedback format="moodle_auto_format"><text>Correct</text></feedback>
+    </answer>
+
+    <answer fraction="0" format="moodle_auto_format">
+      <text>A bad product</text>
+      <feedback format="moodle_auto_format"><text>Incorrect</text></feedback>
+    </answer>
+
+    <answer fraction="0" format="moodle_auto_format">
+      <text>A unit conversion problem</text>
+      <feedback format="moodle_auto_format"><text>Incorrect</text></feedback>
+    </answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text>Q4. Frequency Checks</text></name>
+    <questiontext format="moodle_auto_format"><text>Why are frequency checks important?</text></questiontext>
+    <generalfeedback format="moodle_auto_format"><text /></generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+
+    <answer fraction="0" format="moodle_auto_format">
+      <text>They help create charts</text>
+      <feedback format="moodle_auto_format"><text>Incorrect</text></feedback>
+    </answer>
+
+    <answer fraction="100" format="moodle_auto_format">
+      <text>They show operational footprint consistency</text>
+      <feedback format="moodle_auto_format"><text>Correct</text></feedback>
+    </answer>
+
+    <answer fraction="0" format="moodle_auto_format">
+      <text>They help with model training</text>
+      <feedback format="moodle_auto_format"><text>Incorrect</text></feedback>
+    </answer>
+
+    <answer fraction="0" format="moodle_auto_format">
+      <text>They remove duplicates</text>
+      <feedback format="moodle_auto_format"><text>Incorrect</text></feedback>
+    </answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text>Q5. Outlier Checks</text></name>
+    <questiontext format="moodle_auto_format"><text>Why do we perform outlier checks in SEE?</text></questiontext>
+    <generalfeedback format="moodle_auto_format"><text /></generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+
+    <answer fraction="0" format="moodle_auto_format">
+      <text>To delete outliers immediately</text>
+      <feedback format="moodle_auto_format"><text>Incorrect</text></feedback>
+    </answer>
+
+    <answer fraction="100" format="moodle_auto_format">
+      <text>To understand whether the extremes are real or errors</text>
+      <feedback format="moodle_auto_format"><text>Correct</text></feedback>
+    </answer>
+
+    <answer fraction="0" format="moodle_auto_format">
+      <text>To reduce dataset size</text>
+      <feedback format="moodle_auto_format"><text>Incorrect</text></feedback>
+    </answer>
+
+    <answer fraction="0" format="moodle_auto_format">
+      <text>To prepare for classification</text>
+      <feedback format="moodle_auto_format"><text>Incorrect</text></feedback>
+    </answer>
+  </question>
+</quiz>
