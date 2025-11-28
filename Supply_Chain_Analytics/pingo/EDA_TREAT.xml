@@ -1,0 +1,166 @@
+<quiz>
+  <question type="multichoice">
+    <name><text>Q1. Missingness Logic</text></name>
+    <questiontext format="moodle_auto_format"><text>When examining missingness in a multi-system SCM dataset, which scenario most strongly indicates MNAR (Missing Not At Random)?</text></questiontext>
+    <generalfeedback format="moodle_auto_format"><text /></generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+
+    <answer fraction="0" format="moodle_auto_format">
+      <text>Temperature_C missing evenly across all Product Categories</text>
+      <feedback format="moodle_auto_format"><text>Incorrect</text></feedback>
+    </answer>
+
+    <answer fraction="0" format="moodle_auto_format">
+      <text>Random gaps in Weight_kg due to scanner outages</text>
+      <feedback format="moodle_auto_format"><text>Incorrect</text></feedback>
+    </answer>
+
+    <answer fraction="100" format="moodle_auto_format">
+      <text>Notes missing specifically when shipments had no issues recorded</text>
+      <feedback format="moodle_auto_format"><text>Correct</text></feedback>
+    </answer>
+
+    <answer fraction="0" format="moodle_auto_format">
+      <text>Missing Delivery_Time_hrs appearing after dtype coercion</text>
+      <feedback format="moodle_auto_format"><text>Incorrect</text></feedback>
+    </answer>
+
+  </question>
+
+  <question type="multichoice">
+    <name><text>Q2. Order of TREAT Steps</text></name>
+    <questiontext format="moodle_auto_format"><text>Why must logical cleaning (negative or zero values) come before median imputation?</text></questiontext>
+    <generalfeedback format="moodle_auto_format"><text /></generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+
+    <answer fraction="0" format="moodle_auto_format">
+      <text>Because median computation requires all columns to be categorical</text>
+      <feedback format="moodle_auto_format"><text>Incorrect</text></feedback>
+    </answer>
+
+    <answer fraction="100" format="moodle_auto_format">
+      <text>Logical errors must be turned into NaN before they distort the imputation value</text>
+      <feedback format="moodle_auto_format"><text>Correct</text></feedback>
+    </answer>
+
+    <answer fraction="0" format="moodle_auto_format">
+      <text>Weight values cannot be imputed without fixing Notes first</text>
+      <feedback format="moodle_auto_format"><text>Incorrect</text></feedback>
+    </answer>
+
+    <answer fraction="0" format="moodle_auto_format">
+      <text>Outlier treatment cannot run otherwise</text>
+      <feedback format="moodle_auto_format"><text>Incorrect</text></feedback>
+    </answer>
+
+  </question>
+
+  <question type="multichoice">
+    <name><text>Q3. Data Type Correction</text></name>
+    <questiontext format="moodle_auto_format"><text>Converting Delivery_Time_hrs using pd.to_numeric(errors='coerce') is necessary because it detects corrupted text entries and turns them into NaN for proper cleaning.</text></questiontext>
+    <generalfeedback format="moodle_auto_format"><text /></generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+
+    <answer fraction="0" format="moodle_auto_format">
+      <text>It replaces all numeric values with strings</text>
+      <feedback format="moodle_auto_format"><text>Incorrect</text></feedback>
+    </answer>
+
+    <answer fraction="0" format="moodle_auto_format">
+      <text>It forces pandas to guess missing categories</text>
+      <feedback format="moodle_auto_format"><text>Incorrect</text></feedback>
+    </answer>
+
+    <answer fraction="100" format="moodle_auto_format">
+      <text>It detects corrupted text entries and turns them into NaN for proper cleaning</text>
+      <feedback format="moodle_auto_format"><text>Correct</text></feedback>
+    </answer>
+
+    <answer fraction="0" format="moodle_auto_format">
+      <text>It automatically fixes outliers</text>
+      <feedback format="moodle_auto_format"><text>Incorrect</text></feedback>
+    </answer>
+
+  </question>
+
+  <question type="multichoice">
+    <name><text>Q4. Outlier Treatment</text></name>
+    <questiontext format="moodle_auto_format"><text>After plotting Delivery_Time_hrs before TREAT, the distribution shows heavy right tail delays. What is the correct TREAT response?</text></questiontext>
+    <generalfeedback format="moodle_auto_format"><text /></generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+
+    <answer fraction="0" format="moodle_auto_format">
+      <text>Replace all values above the mean with the median</text>
+      <feedback format="moodle_auto_format"><text>Incorrect</text></feedback>
+    </answer>
+
+    <answer fraction="0" format="moodle_auto_format">
+      <text>Delete all rows with high delivery times</text>
+      <feedback format="moodle_auto_format"><text>Incorrect</text></feedback>
+    </answer>
+
+    <answer fraction="100" format="moodle_auto_format">
+      <text>Use IQR thresholds and apply .clip() to cap extreme values</text>
+      <feedback format="moodle_auto_format"><text>Correct</text></feedback>
+    </answer>
+
+    <answer fraction="0" format="moodle_auto_format">
+      <text>Expand the scale to hide the outliers</text>
+      <feedback format="moodle_auto_format"><text>Incorrect</text></feedback>
+    </answer>
+
+  </question>
+
+  <question type="multichoice">
+    <name><text>Q5. SCM Context TREAT</text></name>
+    <questiontext format="moodle_auto_format"><text>Why is Weight_kg imputed by Product_Category instead of using the global median?</text></questiontext>
+    <generalfeedback format="moodle_auto_format"><text /></generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+
+    <answer fraction="100" format="moodle_auto_format">
+      <text>Different categories have different typical weights, so a global median would distort product-level KPIs</text>
+      <feedback format="moodle_auto_format"><text>Correct</text></feedback>
+    </answer>
+
+    <answer fraction="0" format="moodle_auto_format">
+      <text>Warehouse_ID determines the weight distribution</text>
+      <feedback format="moodle_auto_format"><text>Incorrect</text></feedback>
+    </answer>
+
+    <answer fraction="0" format="moodle_auto_format">
+      <text>Temperature sensors influence weight</text>
+      <feedback format="moodle_auto_format"><text>Incorrect</text></feedback>
+    </answer>
+
+    <answer fraction="0" format="moodle_auto_format">
+      <text>MAR cannot occur in SCM datasets</text>
+      <feedback format="moodle_auto_format"><text>Incorrect</text></feedback>
+    </answer>
+
+  </question>
+</quiz>
