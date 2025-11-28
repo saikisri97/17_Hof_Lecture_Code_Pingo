@@ -1,0 +1,141 @@
+<quiz>
+  <question type="multichoice">
+    <name><text>Q1. VERIFY Goal</text></name>
+    <questiontext format="moodle_auto_format"><text>What is the primary goal of VERIFY in the SEE–TREAT–VERIFY pipeline?</text></questiontext>
+    <generalfeedback format="moodle_auto_format"><text /></generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>To clean remaining missing values</text>
+      <feedback format="moodle_auto_format"><text>Incorrect. Cleaning belongs to the TREAT phase, not VERIFY.</text></feedback>
+    </answer>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>To confirm the dataset behaves like stable operational data</text>
+      <feedback format="moodle_auto_format"><text>Correct. VERIFY checks that the treated dataset behaves like realistic, stable SCM data.</text></feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>To remove outliers</text>
+      <feedback format="moodle_auto_format"><text>Incorrect. Outlier handling is part of TREAT, not VERIFY.</text></feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>To merge reference and treated data</text>
+      <feedback format="moodle_auto_format"><text>Incorrect. VERIFY compares against reference but does not primarily merge datasets.</text></feedback>
+    </answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text>Q2. Structural Verification Failure</text></name>
+    <questiontext format="moodle_auto_format"><text>Which result indicates a FAILED structural verification?</text></questiontext>
+    <generalfeedback format="moodle_auto_format"><text /></generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>OTIF = 92%</text>
+      <feedback format="moodle_auto_format"><text>Incorrect. A valid OTIF value does not by itself indicate structural failure.</text></feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>Weight_kg median varies by product category</text>
+      <feedback format="moodle_auto_format"><text>Incorrect. Different medians by category are expected and structurally fine.</text></feedback>
+    </answer>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>Delivery_Time_hrs still contains negative values</text>
+      <feedback format="moodle_auto_format"><text>Correct. Negative delivery times violate logical rules, so structural verification fails.</text></feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>EUR/kg matches reference</text>
+      <feedback format="moodle_auto_format"><text>Incorrect. Matching a reference KPI supports, not breaks, structural verification.</text></feedback>
+    </answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text>Q3. Comparing df_treat and df_clean_reference</text></name>
+    <questiontext format="moodle_auto_format"><text>Why compare df_treat with df_clean_reference?</text></questiontext>
+    <generalfeedback format="moodle_auto_format"><text /></generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>To copy values directly</text>
+      <feedback format="moodle_auto_format"><text>Incorrect. VERIFY does not simply copy values from the reference dataset.</text></feedback>
+    </answer>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>To ensure TREAT produces realistic operational behaviour</text>
+      <feedback format="moodle_auto_format"><text>Correct. The comparison checks that TREATed data behaves like real operational data.</text></feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>To identify duplicate rows</text>
+      <feedback format="moodle_auto_format"><text>Incorrect. Duplicate detection is not the main purpose of this comparison.</text></feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>To merge two datasets</text>
+      <feedback format="moodle_auto_format"><text>Incorrect. The goal is validation, not merging.</text></feedback>
+    </answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text>Q4. KPI Readiness Check</text></name>
+    <questiontext format="moodle_auto_format"><text>Which KPI failure suggests the dataset is NOT ready?</text></questiontext>
+    <generalfeedback format="moodle_auto_format"><text /></generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>OTIF cannot compute due to NaN in On_Time_Flag</text>
+      <feedback format="moodle_auto_format"><text>Correct. VERIFY fails if KPI-critical fields like On_Time_Flag still contain NaN.</text></feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>Delivery time varies by region</text>
+      <feedback format="moodle_auto_format"><text>Incorrect. Regional variation is realistic and does not imply a VERIFY failure by itself.</text></feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>Sales per kg differs slightly from reference</text>
+      <feedback format="moodle_auto_format"><text>Incorrect. Small differences can be acceptable if overall behaviour is realistic.</text></feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>Boxplot shows normal spread</text>
+      <feedback format="moodle_auto_format"><text>Incorrect. A normal spread supports dataset readiness, not failure.</text></feedback>
+    </answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text>Q5. Category-Level Realism</text></name>
+    <questiontext format="moodle_auto_format"><text>Which VERIFY check ensures category-level realism?</text></questiontext>
+    <generalfeedback format="moodle_auto_format"><text /></generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>Counting rows per Carrier</text>
+      <feedback format="moodle_auto_format"><text>Incorrect. Carrier row counts do not directly verify category-level realism.</text></feedback>
+    </answer>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>Grouping Weight_kg by Product_Category and comparing medians</text>
+      <feedback format="moodle_auto_format"><text>Correct. Checking medians by Product_Category tests whether weights look realistic per category.</text></feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>Replacing missing Notes</text>
+      <feedback format="moodle_auto_format"><text>Incorrect. Notes imputation is a TREAT step, not a VERIFY realism check.</text></feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>Sorting Delivery_Time_hrs</text>
+      <feedback format="moodle_auto_format"><text>Incorrect. Sorting alone does not check realism at category level.</text></feedback>
+    </answer>
+  </question>
+</quiz>
