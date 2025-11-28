@@ -67,7 +67,7 @@
 
   <question type="multichoice">
     <name><text>Q3. Data Type Correction</text></name>
-    <questiontext format="moodle_auto_format"><text>Converting Delivery_Time_hrs using pd.to_numeric(errors='coerce') is necessary because it detects corrupted text entries and turns them into NaN for proper cleaning.</text></questiontext>
+    <questiontext format="moodle_auto_format"><text>Converting Delivery_Time_hrs using pd.to_numeric(errors='coerce') is necessary because </text></questiontext>
     <generalfeedback format="moodle_auto_format"><text /></generalfeedback>
     <defaultgrade>1</defaultgrade>
     <penalty>0.3333333</penalty>
