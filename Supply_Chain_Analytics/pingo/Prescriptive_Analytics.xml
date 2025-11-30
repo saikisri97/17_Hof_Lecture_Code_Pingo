@@ -42,7 +42,7 @@
     <single>true</single>
     <shuffleanswers>true</shuffleanswers>
     <answernumbering>abc</answernumbering>
-    <answer fraction="100" format="moodle_auto_format">
+    <answer fraction="0" format="moodle_auto_format">
       <text>DC_West</text>
       <feedback format="moodle_auto_format"><text>Correct: In typical cost/distance setups, DC_West absorbs more of Store_C’s incremental demand.</text></feedback>
     </answer>
@@ -54,7 +54,7 @@
       <text>DC_North</text>
       <feedback format="moodle_auto_format"><text>Try again.</text></feedback>
     </answer>
-    <answer fraction="0" format="moodle_auto_format">
+    <answer fraction="100" format="moodle_auto_format">
       <text>None; demand unmet</text>
       <feedback format="moodle_auto_format"><text>Try again.</text></feedback>
     </answer>
