@@ -1,0 +1,139 @@
+<?xml version='1.0' encoding='utf-8'?>
+
+<quiz>
+  <question type="multichoice">
+    <name><text>Q1. SEE phase focus</text></name>
+    <questiontext format="moodle_auto_format"><text>In the Sales &amp; Demand Planning pipeline, what is the primary goal of the SEE phase on the weekly sales data?</text></questiontext>
+    <generalfeedback format="moodle_auto_format"><text /></generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>Generate a 3-week moving average forecast for each SKU.</text>
+      <feedback format="moodle_auto_format"><text>Not quite. Forecasting is done after SEE, not during the initial data understanding.</text></feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>Decide the final replenishment quantity to order.</text>
+      <feedback format="moodle_auto_format"><text>No. Replenishment decisions come after we understand and clean the data.</text></feedback>
+    </answer>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>Detect structural and value issues such as missing weeks, wrong dtypes, duplicates, and anomalies.</text>
+      <feedback format="moodle_auto_format"><text>Correct. SEE focuses on surfacing structural and anomaly issues in the raw weekly data.</text></feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>Optimize transport routes between warehouses.</text>
+      <feedback format="moodle_auto_format"><text>No. Transport optimisation is a different problem and not the goal of SEE on sales data.</text></feedback>
+    </answer>
+  </question>
+  <question type="multichoice">
+    <name><text>Q2. Duplicate (SKU, Week) handling</text></name>
+    <questiontext format="moodle_auto_format"><text>Why do we group by (SKU, Week_dt) and aggregate Sales_Units, Is_Promo, and Price before reindexing to the full weekly calendar?</text></questiontext>
+    <generalfeedback format="moodle_auto_format"><text /></generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>To collapse multiple rows for the same SKU and week into a single, consistent demand signal.</text>
+      <feedback format="moodle_auto_format"><text>Correct. Grouping resolves duplicates and produces one clean demand value per SKU per week.</text></feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>To artificially increase the number of records for better model training.</text>
+      <feedback format="moodle_auto_format"><text>No. The goal is to clean duplicates, not to inflate the dataset size.</text></feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>To remove all promo weeks from the dataset.</text>
+      <feedback format="moodle_auto_format"><text>Incorrect. Promo weeks are kept; we only resolve duplicate rows per SKU and week.</text></feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>To ensure every SKU has exactly the same mean sales.</text>
+      <feedback format="moodle_auto_format"><text>No. Grouping does not force SKUs to have the same mean; it just aggregates duplicates.</text></feedback>
+    </answer>
+  </question>
+  <question type="multichoice">
+    <name><text>Q3. Promo uplift interpretation</text></name>
+    <questiontext format="moodle_auto_format"><text>For a given SKU, average Sales_Units are 100 on non-promo weeks and 140 on promo weeks. What is the promo uplift (%)?</text></questiontext>
+    <generalfeedback format="moodle_auto_format"><text /></generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>28%</text>
+      <feedback format="moodle_auto_format"><text>Incorrect. Use (140 − 100) / 100 × 100% to compute uplift.</text></feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>35%</text>
+      <feedback format="moodle_auto_format"><text>No. Recalculate the uplift using the change divided by the base demand.</text></feedback>
+    </answer>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>40%</text>
+      <feedback format="moodle_auto_format"><text>Correct. Promo uplift = (140 − 100) / 100 × 100% = 40%.</text></feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>70%</text>
+      <feedback format="moodle_auto_format"><text>Incorrect. That would overstate the effect; the correct uplift is 40%.</text></feedback>
+    </answer>
+  </question>
+  <question type="multichoice">
+    <name><text>Q4. MAPE vs Forecast Bias</text></name>
+    <questiontext format="moodle_auto_format"><text>What is the main difference between MAPE and Forecast Bias when evaluating the moving average forecast?</text></questiontext>
+    <generalfeedback format="moodle_auto_format"><text /></generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>MAPE measures only over-forecasting, while Bias measures only under-forecasting.</text>
+      <feedback format="moodle_auto_format"><text>No. Both metrics can reflect over- and under-forecasting in different ways.</text></feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>MAPE is computed in units, while Bias is computed in percentages.</text>
+      <feedback format="moodle_auto_format"><text>Incorrect. MAPE is a percentage error; Bias can be defined in units or percentages.</text></feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>They are the same metric with different names.</text>
+      <feedback format="moodle_auto_format"><text>No. MAPE and Bias capture different aspects of forecast performance.</text></feedback>
+    </answer>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>MAPE measures average percentage error magnitude, while Bias measures systematic over- or under-forecasting.</text>
+      <feedback format="moodle_auto_format"><text>Correct. MAPE focuses on error size, whereas Bias shows consistent over- or under-forecasting.</text></feedback>
+    </answer>
+  </question>
+  <question type="multichoice">
+    <name><text>Q5. Safety stock drivers</text></name>
+    <questiontext format="moodle_auto_format"><text>In our simple replenishment logic, Safety_Stock = z · weekly_std. Which change will most directly reduce the safety stock requirement for a SKU?</text></questiontext>
+    <generalfeedback format="moodle_auto_format"><text /></generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>Increasing the 3-week moving average forecast.</text>
+      <feedback format="moodle_auto_format"><text>No. Raising the forecast does not directly reduce safety stock in this formula.</text></feedback>
+    </answer>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>Reducing the weekly demand variability (lower weekly_std).</text>
+      <feedback format="moodle_auto_format"><text>Correct. Safety stock scales with weekly_std, so lower variability reduces safety stock for the same service level.</text></feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>Shortening the historical time window from 26 to 4 weeks.</text>
+      <feedback format="moodle_auto_format"><text>Not necessarily. Changing the window length does not guarantee a lower weekly_std.</text></feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>Increasing the promotion frequency.</text>
+      <feedback format="moodle_auto_format"><text>Incorrect. More promotions usually increase variability and can increase safety stock needs.</text></feedback>
+    </answer>
+  </question>
+</quiz>
