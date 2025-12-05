@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quiz>
+
+  <!-- Q1: SEE vs TREAT on Supplier Names -->
+  <question type="multichoice">
+    <name>
+      <text>Q1. SEE vs TREAT for supplier name inconsistencies</text>
+    </name>
+    <questiontext format="moodle_auto_format">
+      <text>In the Procurement &amp; Supplier Management notebook, you discover that the Supplier column contains values like "A", "Supp A", and "supA". According to the SEE–TREAT–VERIFY pattern, which action belongs to the TREAT phase?</text>
+    </questiontext>
+    <generalfeedback format="moodle_auto_format">
+      <text>SEE is about detecting that "A", "Supp A", and "supA" refer to the same supplier. TREAT is where we actually standardise them to a single clean label, e.g. "A".</text>
+    </generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <single>true</single>
+    <shuffleanswers>1</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+
+    <answer fraction="0">
+      <text>Listing all distinct supplier labels and printing them.</text>
+      <feedback format="moodle_auto_format">
+        <text>This is part of SEE (diagnosing the issue), not TREAT.</text>
+      </feedback>
+    </answer>
+    <answer fraction="100">
+      <text>Mapping "Supp A" and "supA" to the canonical label "A" in df_treat.</text>
+      <feedback format="moodle_auto_format">
+        <text>Correct. Normalising supplier names is a TREAT step — it modifies the data.</text>
+      </feedback>
+    </answer>
+    <answer fraction="0">
+      <text>Checking how many POs each supplier has after cleaning.</text>
+      <feedback format="moodle_auto_format">
+        <text>This is closer to VERIFY or descriptive analysis after TREAT.</text>
+      </feedback>
+    </answer>
+    <answer fraction="0">
+      <text>Plotting a bar chart of number of POs per supplier in df_raw.</text>
+      <feedback format="moodle_auto_format">
+        <text>This visualization belongs to SEE, not TREAT.</text>
+      </feedback>
+    </answer>
+  </question>
+
+  <!-- Q2: Imputing Delivery_Date logic -->
+  <question type="multichoice">
+    <name>
+      <text>Q2. Imputing missing Delivery_Date correctly</text>
+    </name>
+    <questiontext format="moodle_auto_format">
+      <text>In STEP 2B, missing Delivery_Date values are imputed using supplier-specific median lead time. For a PO from Supplier B with PO_Date = 2024-02-10 and median Lead_Time_Days for B = 9, what is the correct imputed Delivery_Date?</text>
+    </questiontext>
+    <generalfeedback format="moodle_auto_format">
+      <text>We use Delivery_Date = PO_Date + median_lead_time_for_that_supplier, so here 2024-02-10 + 9 days = 2024-02-19.</text>
+    </generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <single>true</single>
+    <shuffleanswers>1</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+
+    <answer fraction="0">
+      <text>2024-02-10</text>
+      <feedback format="moodle_auto_format">
+        <text>That would imply zero lead time; we explicitly avoid zero / negative lead times.</text>
+      </feedback>
+    </answer>
+    <answer fraction="100">
+      <text>2024-02-19</text>
+      <feedback format="moodle_auto_format">
+        <text>Correct. 10th + 9 days = 19th.</text>
+      </feedback>
+    </answer>
+    <answer fraction="0">
+      <text>2024-02-18</text>
+      <feedback format="moodle_auto_format">
+        <text>This assumes 8 days, not the median of 9 days.</text>
+      </feedback>
+    </answer>
+    <answer fraction="0">
+      <text>2024-02-28</text>
+      <feedback format="moodle_auto_format">
+        <text>Too far out; there is no justification from the median lead time.</text>
+      </feedback>
+    </answer>
+  </question>
+
+  <!-- Q3: OTD% and Late_Flag definition -->
+  <question type="multichoice">
+    <name>
+      <text>Q3. Correct definition of Late_Flag and OTD%</text>
+    </name>
+    <questiontext format="moodle_auto_format">
+      <text>In STEP 4A you define Late_Flag using a promised lead time of 10 days. Which implementation correctly computes Late_Flag and On-Time Delivery % (OTD%) per supplier in the VERIFIED df_treat?</text>
+    </questiontext>
+    <generalfeedback format="moodle_auto_format">
+      <text>Late_Flag is 1 when Lead_Time_Days &gt; promised_lead_time. OTD% is (1 - mean(Late_Flag)) * 100 per supplier.</text>
+    </generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <single>true</single>
+    <shuffleanswers>1</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+
+    <answer fraction="0">
+      <text><![CDATA[
+Late_Flag = (df_treat['Lead_Time_Days'] >= 10).astype(int)
+OTD = df_treat.groupby('Supplier')['Late_Flag'].mean() * 100
+]]></text>
+      <feedback format="moodle_auto_format">
+        <text>This labels deliveries on day 10 as late and uses mean(Late_Flag) instead of 1 - mean.</text>
+      </feedback>
+    </answer>
+    <answer fraction="100">
+      <text><![CDATA[
+Late_Flag = (df_treat['Lead_Time_Days'] > 10).astype(int)
+grp = df_treat.groupby('Supplier')
+OTD = (1 - grp['Late_Flag'].mean()) * 100
+]]></text>
+      <feedback format="moodle_auto_format">
+        <text>Correct. Late_Flag is 1 only when lead time exceeds the promised threshold, and OTD% is 1 - mean(late).</text>
+      </feedback>
+    </answer>
+    <answer fraction="0">
+      <text><![CDATA[
+Late_Flag = (df_treat['Lead_Time_Days'] < 10).astype(int)
+OTD = grp['Late_Flag'].mean() * 100
+]]></text>
+      <feedback format="moodle_auto_format">
+        <text>This inverts the logic: earlier deliveries wrongly counted as “late”.</text>
+      </feedback>
+    </answer>
+    <answer fraction="0">
+      <text><![CDATA[
+Late_Flag = (df_treat['Lead_Time_Days'] > 10).astype(int)
+OTD = grp['Lead_Time_Days'].mean()
+]]></text>
+      <feedback format="moodle_auto_format">
+        <text>OTD% must be computed from Late_Flag, not from raw mean lead times.</text>
+      </feedback>
+    </answer>
+  </question>
+
+  <!-- Q4: CV% interpretation -->
+  <question type="multichoice">
+    <name>
+      <text>Q4. Interpreting CV% for lead time</text>
+    </name>
+    <questiontext format="moodle_auto_format">
+      <text>In the KPI table, Supplier A has Mean Lead_Time_Days = 10 and Std = 3, while Supplier B has Mean Lead_Time_Days = 9 and Std = 1.5. Which statement best describes the implication for safety stock?</text>
+    </questiontext>
+    <generalfeedback format="moodle_auto_format">
+      <text>CV_A = 30% vs CV_B ≈ 16.7%. Higher CV% means more variability, so Supplier A needs more safety stock than B, even though A's mean lead time is only slightly higher.</text>
+    </generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <single>true</single>
+    <shuffleanswers>1</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+
+    <answer fraction="0">
+      <text>Supplier A requires less safety stock because its mean lead time is only 1 day higher than B.</text>
+      <feedback format="moodle_auto_format">
+        <text>This ignores variability; safety stock is driven strongly by standard deviation and CV%.</text>
+      </feedback>
+    </answer>
+    <answer fraction="100">
+      <text>Supplier A requires more safety stock than B because its CV% is higher (30% vs ≈16.7%), meaning lead times are less predictable.</text>
+      <feedback format="moodle_auto_format">
+        <text>Correct. Higher CV% ⇒ more uncertainty ⇒ more buffering.</text>
+      </feedback>
+    </answer>
+    <answer fraction="0">
+      <text>Safety stock requirements are the same, because both suppliers are under 15 days average lead time.</text>
+      <feedback format="moodle_auto_format">
+        <text>Average alone is not enough; variability matters a lot.</text>
+      </feedback>
+    </answer>
+    <answer fraction="0">
+      <text>Supplier B needs more safety stock because it delivers faster on average and is therefore “riskier”.</text>
+      <feedback format="moodle_auto_format">
+        <text>Faster average does not imply more risk; CV% is lower for B, so it is more stable.</text>
+      </feedback>
+    </answer>
+  </question>
+
+  <!-- Q5: Using late probability for allocation -->
+  <question type="multichoice">
+    <name>
+      <text>Q5. Using Late_Prob for prescriptive allocation</text>
+    </name>
+    <questiontext format="moodle_auto_format">
+      <text>After STEP 7C you obtain the following averages from the logistic regression model: Supplier A Late_Prob = 0.22, Supplier B Late_Prob = 0.10, Supplier C Late_Prob = 0.35. All three have similar prices, but Supplier C also has the highest defect rate. Which allocation strategy is most consistent with the prescriptive logic in STEP 8?</text>
+    </questiontext>
+    <generalfeedback format="moodle_auto_format">
+      <text>Given higher late probability and defects for C, it is reasonable to exclude C, allocate the majority to the most reliable supplier (B), and keep some volume with A for diversification.</text>
+    </generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <single>true</single>
+    <shuffleanswers>1</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+
+    <answer fraction="0">
+      <text>Allocate 100% of volume to Supplier C to “help them improve” and reduce risk.</text>
+      <feedback format="moodle_auto_format">
+        <text>This increases operational risk instead of reducing it.</text>
+      </feedback>
+    </answer>
+    <answer fraction="0">
+      <text>Split volume equally: 33% to each supplier, because prices are similar.</text>
+      <feedback format="moodle_auto_format">
+        <text>An equal split ignores the higher risk for Supplier C shown by Late_Prob and defects.</text>
+      </feedback>
+    </answer>
+    <answer fraction="100">
+      <text>Allocate most volume to Supplier B (e.g. 70%), some to Supplier A (e.g. 30%), and avoid Supplier C due to high Late_Prob and defect rate.</text>
+      <feedback format="moodle_auto_format">
+        <text>Correct. This is consistent with a risk-based allocation strategy.</text>
+      </feedback>
+    </answer>
+    <answer fraction="0">
+      <text>Allocate all volume to Supplier A because its Late_Prob is higher than B and thus “includes more safety margin”.</text>
+      <feedback format="moodle_auto_format">
+        <text>Higher Late_Prob is a risk indicator, not a safety margin.</text>
+      </feedback>
+    </answer>
+  </question>
+
+</quiz>
