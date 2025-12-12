@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<quiz>
+  <question type="multichoice">
+    <name><text>Q1. Service Level vs Fill Rate</text></name>
+    <questiontext format="moodle_auto_format"><text>Which situation will reduce Service Level but may leave Fill Rate almost unchanged?</text></questiontext>
+    <generalfeedback format="moodle_auto_format"><text /></generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>Missing a large demand spike on a single day</text>
+      <feedback format="moodle_auto_format"><text>Incorrect. A large missed spike will hurt Fill Rate significantly, not leave it almost unchanged.</text></feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>Fulfilling all demand but only after long delays</text>
+      <feedback format="moodle_auto_format"><text>Incorrect. With long delays, Fill Rate can still be high, but this is not about a low-demand stockout day.</text></feedback>
+    </answer>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>Running out of stock on a low-demand day</text>
+      <feedback format="moodle_auto_format"><text>Correct. Service Level is day-based, so any zero-stock day reduces SL, even if the demand on that day is low.</text></feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>Supplier delivering early and increasing on-hand inventory</text>
+      <feedback format="moodle_auto_format"><text>Incorrect. Early delivery raises on-hand inventory and does not directly reduce Service Level.</text></feedback>
+    </answer>
+  </question>
+  <question type="multichoice">
+    <name><text>Q2. Stockout root cause: demand vs supplier</text></name>
+    <questiontext format="moodle_auto_format"><text>A stockout occurred on a day where demand was far above mean plus standard deviation, while lead time remained normal. What is the most likely root cause?</text></questiontext>
+    <generalfeedback format="moodle_auto_format"><text /></generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>Late supplier</text>
+      <feedback format="moodle_auto_format"><text>Incorrect. Lead time is normal, so a late supplier is not the main driver of this stockout.</text></feedback>
+    </answer>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>Demand spike</text>
+      <feedback format="moodle_auto_format"><text>Correct. Demand far above mean plus standard deviation with normal lead time indicates a demand-driven stockout.</text></feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>Both demand spike and late supplier</text>
+      <feedback format="moodle_auto_format"><text>Incorrect. The scenario states that lead time remained normal, so the supplier is not late.</text></feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>Insufficient dataset quality</text>
+      <feedback format="moodle_auto_format"><text>Incorrect. The stockout is best explained by an extreme demand spike rather than a data quality issue.</text></feedback>
+    </answer>
+  </question>
+  <question type="multichoice">
+    <name><text>Q3. Days of cover calculation</text></name>
+    <questiontext format="moodle_auto_format"><text>If On-Hand Inventory is 480 units and recent average daily demand is 80 units, how many days of cover remain?</text></questiontext>
+    <generalfeedback format="moodle_auto_format"><text /></generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>4 days</text>
+      <feedback format="moodle_auto_format"><text>Incorrect. Days of cover is On-Hand divided by average daily demand: 480 divided by 80 is not 4.</text></feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>5 days</text>
+      <feedback format="moodle_auto_format"><text>Incorrect. 480 units at 80 units per day would last longer than 5 days.</text></feedback>
+    </answer>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>6 days</text>
+      <feedback format="moodle_auto_format"><text>Correct. Days of cover = On-Hand divided by average daily demand = 480 divided by 80 = 6 days.</text></feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>7 days</text>
+      <feedback format="moodle_auto_format"><text>Incorrect. You are overestimating; 480 divided by 80 gives 6 days, not 7.</text></feedback>
+    </answer>
+  </question>
+  <question type="multichoice">
+    <name><text>Q4. Safety Stock drivers</text></name>
+    <questiontext format="moodle_auto_format"><text>Which change will increase Safety Stock the most, assuming all else equal?</text></questiontext>
+    <generalfeedback format="moodle_auto_format"><text /></generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>Reducing the service target (lower z-score)</text>
+      <feedback format="moodle_auto_format"><text>Incorrect. Lowering the service target reduces the z-score and therefore lowers Safety Stock.</text></feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>Lowering daily demand volatility (lower sigma)</text>
+      <feedback format="moodle_auto_format"><text>Incorrect. Lower volatility (lower sigma) decreases Safety Stock, it does not increase it.</text></feedback>
+    </answer>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>Increasing supplier lead time from 4 to 9 days</text>
+      <feedback format="moodle_auto_format"><text>Correct. Safety Stock SS equals z times sigma times square root of L; increasing lead time L from 4 to 9 strongly increases SS.</text></feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>Keeping sigma and L constant but increasing receipt quantity</text>
+      <feedback format="moodle_auto_format"><text>Incorrect. Receipt quantity does not directly enter the standard Safety Stock formula.</text></feedback>
+    </answer>
+  </question>
+  <question type="multichoice">
+    <name><text>Q5. Reorder Point decision</text></name>
+    <questiontext format="moodle_auto_format"><text>You compute a Reorder Point (ROP) of 460 units. Current Inventory Position (On-Hand plus On-Order minus Backorders) is 390 units. What should happen next?</text></questiontext>
+    <generalfeedback format="moodle_auto_format"><text /></generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>No action; inventory is above the threshold</text>
+      <feedback format="moodle_auto_format"><text>Incorrect. Inventory Position is below the ROP, so the threshold has already been crossed.</text></feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>Increase safety stock first, then decide</text>
+      <feedback format="moodle_auto_format"><text>Incorrect. The ROP has already been crossed; you should trigger replenishment immediately.</text></feedback>
+    </answer>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>Place a replenishment order now</text>
+      <feedback format="moodle_auto_format"><text>Correct. When Inventory Position falls below the Reorder Point, replenishment must be triggered immediately.</text></feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>Reduce demand temporarily to avoid stockouts</text>
+      <feedback format="moodle_auto_format"><text>Incorrect. The correct control action in an ROP system is to place an order, not to artificially reduce demand.</text></feedback>
+    </answer>
+  </question>
+</quiz>
