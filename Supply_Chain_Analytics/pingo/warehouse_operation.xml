@@ -1,0 +1,141 @@
+<quiz>
+  <question type="multichoice">
+    <name><text>Q1. Cycle Time Interpretation</text></name>
+    <questiontext format="moodle_auto_format"><text>In the notebook, average cycle time increases sharply on certain days even though total orders do not increase proportionally. Which explanation is most consistent with the analytics logic used?</text></questiontext>
+    <generalfeedback format="moodle_auto_format"><text /></generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>Workers were reduced, so throughput collapsed directly</text>
+      <feedback format="moodle_auto_format"><text>Incorrect. The pattern described is not explained by a direct headcount drop alone; the notebook logic emphasizes congestion-driven rate degradation.</text></feedback>
+    </answer>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>Pick rate degraded due to congestion, increasing effective processing time</text>
+      <feedback format="moodle_auto_format"><text>Correct. Cycle time rises non-linearly under congestion because effective pick rate drops, even if orders do not rise proportionally.</text></feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>Safety stock was insufficient</text>
+      <feedback format="moodle_auto_format"><text>Incorrect. Safety stock is an inventory topic; this question is about execution congestion and processing dynamics in the warehouse.</text></feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>Forecast error increased arrival rate variance</text>
+      <feedback format="moodle_auto_format"><text>Incorrect. Forecast error is upstream; the notebook logic explains the spike through congestion and reduced effective capacity, not forecasting variance.</text></feedback>
+    </answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text>Q2. Utilization vs Arrival Rate</text></name>
+    <questiontext format="moodle_auto_format"><text>Two days show similar arrival rates but very different utilization levels in the dashboard. Which factor best explains this difference?</text></questiontext>
+    <generalfeedback format="moodle_auto_format"><text /></generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>Difference in order mix</text>
+      <feedback format="moodle_auto_format"><text>Incorrect. Order mix can matter, but the dashboard logic here explains utilization differences primarily through capacity changes.</text></feedback>
+    </answer>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>Difference in effective workers available</text>
+      <feedback format="moodle_auto_format"><text>Correct. Utilization equals arrival divided by capacity, and capacity shifts with effective workers and congestion effects.</text></feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>Difference in forecast horizon</text>
+      <feedback format="moodle_auto_format"><text>Incorrect. Forecast horizon is unrelated to operational utilization in the warehouse execution dashboard.</text></feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>Difference in inventory level</text>
+      <feedback format="moodle_auto_format"><text>Incorrect. Inventory level is not the main driver of utilization in the logic used; utilization depends on arrival and capacity.</text></feedback>
+    </answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text>Q3. Little’s Law Application</text></name>
+    <questiontext format="moodle_auto_format"><text>According to Little’s Law as applied in the notebook, if throughput remains constant and WIP increases, what must happen to cycle time?</text></questiontext>
+    <generalfeedback format="moodle_auto_format"><text /></generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>It decreases</text>
+      <feedback format="moodle_auto_format"><text>Incorrect. With constant throughput, higher WIP cannot reduce cycle time under Little’s Law.</text></feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>It remains unchanged</text>
+      <feedback format="moodle_auto_format"><text>Incorrect. If throughput is constant, cycle time must move with WIP.</text></feedback>
+    </answer>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>It increases</text>
+      <feedback format="moodle_auto_format"><text>Correct. Cycle Time = WIP / Throughput, so with constant throughput, increasing WIP increases cycle time.</text></feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>It becomes unpredictable</text>
+      <feedback format="moodle_auto_format"><text>Incorrect. Under the model logic, the direction is deterministic: higher WIP with constant throughput increases cycle time.</text></feedback>
+    </answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text>Q4. Predictive Scenario Comparison</text></name>
+    <questiontext format="moodle_auto_format"><text>Why does Scenario B (peak-day shock) create more uneven utilization patterns than Scenario A (uniform demand increase)?</text></questiontext>
+    <generalfeedback format="moodle_auto_format"><text /></generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>Scenario B changes pick rate, Scenario A does not</text>
+      <feedback format="moodle_auto_format"><text>Incorrect. The core difference is the day-level demand pattern; pick rate effects are a downstream consequence of uneven pressure.</text></feedback>
+    </answer>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>Scenario B applies demand unevenly across days</text>
+      <feedback format="moodle_auto_format"><text>Correct. Scenario B concentrates arrival pressure into specific days, creating uneven utilization through peak congestion.</text></feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>Scenario A ignores congestion effects</text>
+      <feedback format="moodle_auto_format"><text>Incorrect. The analytics logic still accounts for congestion; Scenario A is simply a uniform increase, which is smoother across days.</text></feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>Scenario B increases safety stock</text>
+      <feedback format="moodle_auto_format"><text>Incorrect. Safety stock is not part of this warehouse execution scenario comparison.</text></feedback>
+    </answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text>Q5. Prescriptive Staffing Decision</text></name>
+    <questiontext format="moodle_auto_format"><text>In the prescriptive analysis, the rounded required staffing often remains constant even when raw staffing requirement changes. What is the correct managerial interpretation?</text></questiontext>
+    <generalfeedback format="moodle_auto_format"><text /></generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>The model is insensitive to demand changes</text>
+      <feedback format="moodle_auto_format"><text>Incorrect. The raw requirement changes; the rounding step is what masks small variations at the decision level.</text></feedback>
+    </answer>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>Rounding hides pressure until a threshold is crossed</text>
+      <feedback format="moodle_auto_format"><text>Correct. Raw values show increasing pressure; rounded values reflect discrete staffing decisions that change only when a threshold is reached.</text></feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>Staffing decisions should always follow raw values</text>
+      <feedback format="moodle_auto_format"><text>Incorrect. Headcount is discrete; managers use rounded staffing while still monitoring raw pressure signals.</text></feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>Congestion effects are irrelevant</text>
+      <feedback format="moodle_auto_format"><text>Incorrect. Congestion is central to why staffing pressure emerges and why small changes can matter near thresholds.</text></feedback>
+    </answer>
+  </question>
+</quiz>
