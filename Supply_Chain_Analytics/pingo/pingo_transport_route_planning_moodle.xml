@@ -1,0 +1,211 @@
+<quiz>
+  <question type="multichoice">
+    <name>
+      <text>Q1. Route Consolidation vs Cost</text>
+    </name>
+    <questiontext format="moodle_auto_format">
+      <text>After OR-assisted routing, the number of routes decreases while total distance traveled remains approximately the same. Total transportation cost still decreases. What is the primary reason for this cost reduction?</text>
+    </questiontext>
+    <generalfeedback format="moodle_auto_format">
+      <text />
+    </generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>Lower variable cost per kilometer</text>
+      <feedback format="moodle_auto_format">
+        <text>Variable cost per kilometer does not change simply due to routing consolidation.</text>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>Fewer fixed trip costs due to better consolidation</text>
+      <feedback format="moodle_auto_format">
+        <text>Reducing the number of routes lowers fixed trip costs, which dominate transportation cost even when distance remains similar.</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>Shorter average delivery distances</text>
+      <feedback format="moodle_auto_format">
+        <text>The total distance remains approximately the same, so this is not the driver.</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>Improved on-time delivery performance</text>
+      <feedback format="moodle_auto_format">
+        <text>Service performance does not directly reduce transportation cost.</text>
+      </feedback>
+    </answer>
+  </question>
+
+  <question type="multichoice">
+    <name>
+      <text>Q2. Utilization Interpretation</text>
+    </name>
+    <questiontext format="moodle_auto_format">
+      <text>Average vehicle utilization increases from 74 percent to 86 percent after OR-assisted routing. Which managerial conclusion is most accurate?</text>
+    </questiontext>
+    <generalfeedback format="moodle_auto_format">
+      <text />
+    </generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>Trucks are being driven faster</text>
+      <feedback format="moodle_auto_format">
+        <text>Utilization measures capacity usage, not vehicle speed.</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>Demand has increased</text>
+      <feedback format="moodle_auto_format">
+        <text>Higher utilization does not imply higher demand.</text>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>Orders are better consolidated onto fewer vehicles</text>
+      <feedback format="moodle_auto_format">
+        <text>Higher utilization reflects improved consolidation of orders onto vehicles.</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>Vehicle capacity has increased</text>
+      <feedback format="moodle_auto_format">
+        <text>Vehicle capacity is fixed and unchanged by routing decisions.</text>
+      </feedback>
+    </answer>
+  </question>
+
+  <question type="multichoice">
+    <name>
+      <text>Q3. Feasibility vs Cost Trade-off</text>
+    </name>
+    <questiontext format="moodle_auto_format">
+      <text>In the baseline scenario, about 20 percent of routes are over capacity, but total cost may look attractive. Why is the baseline plan operationally invalid even if cost appears low?</text>
+    </questiontext>
+    <generalfeedback format="moodle_auto_format">
+      <text />
+    </generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>It violates delivery windows</text>
+      <feedback format="moodle_auto_format">
+        <text>The key issue highlighted is capacity infeasibility, not time windows.</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>It ignores fixed transportation costs</text>
+      <feedback format="moodle_auto_format">
+        <text>The problem is not cost modeling but physical feasibility.</text>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>It cannot be physically executed as planned</text>
+      <feedback format="moodle_auto_format">
+        <text>Over-capacity routes indicate infeasible plans that require last-minute fixes, making the apparent cost misleading.</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>It uses too many vehicles</text>
+      <feedback format="moodle_auto_format">
+        <text>The issue is overloading, not excess vehicle usage.</text>
+      </feedback>
+    </answer>
+  </question>
+
+  <question type="multichoice">
+    <name>
+      <text>Q4. Role of OR in Transportation Decisions</text>
+    </name>
+    <questiontext format="moodle_auto_format">
+      <text>In this session, Operations Research was primarily used to:</text>
+    </questiontext>
+    <generalfeedback format="moodle_auto_format">
+      <text />
+    </generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>Forecast future transportation demand</text>
+      <feedback format="moodle_auto_format">
+        <text>Forecasting is not an OR routing optimization task.</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>Predict traffic delays</text>
+      <feedback format="moodle_auto_format">
+        <text>Traffic prediction was not the objective.</text>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>Compute the best assignment under cost and capacity constraints</text>
+      <feedback format="moodle_auto_format">
+        <text>OR was used as a decision calculator to assign orders to vehicles while respecting constraints.</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>Automatically optimize warehouse picking</text>
+      <feedback format="moodle_auto_format">
+        <text>The focus was transportation routing, not warehouse operations.</text>
+      </feedback>
+    </answer>
+  </question>
+
+  <question type="multichoice">
+    <name>
+      <text>Q5. Service KPI as a Guardrail</text>
+    </name>
+    <questiontext format="moodle_auto_format">
+      <text>After OR-assisted routing, on-time delivery remains unchanged while cost and utilization improve. What does this imply about the OR solution?</text>
+    </questiontext>
+    <generalfeedback format="moodle_auto_format">
+      <text />
+    </generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>It optimized cost by sacrificing service</text>
+      <feedback format="moodle_auto_format">
+        <text>Service performance did not decline.</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>It improved service but ignored cost</text>
+      <feedback format="moodle_auto_format">
+        <text>Cost improvements are explicitly observed.</text>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>It achieved efficiency gains without violating service performance</text>
+      <feedback format="moodle_auto_format">
+        <text>Stable on-time delivery confirms that efficiency gains were achieved without harming service reliability.</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>It overfit the historical data</text>
+      <feedback format="moodle_auto_format">
+        <text>No evidence of overfitting is implied by stable service KPIs.</text>
+      </feedback>
+    </answer>
+  </question>
+</quiz>
