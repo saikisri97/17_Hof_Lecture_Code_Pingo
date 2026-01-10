@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<quiz>
+  <question type="multichoice">
+    <name><text>Q1. "Resolved" vs Customer Trust</text></name>
+    <questiontext format="moodle_auto_format"><text>A ticket is marked as resolved, but the customer contacts support again within 24 hours. Which KPI most directly captures this failure mode?</text></questiontext>
+    <generalfeedback format="moodle_auto_format"><text /></generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>Mean Resolution Time (mean(Resolution_Minutes))</text>
+      <feedback format="moodle_auto_format"><text>Incorrect. Resolution time can be short and still produce re-contact if closure is not trusted.</text></feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>First Contact Resolution Rate (mean(First_Contact_Resolution_Flag))</text>
+      <feedback format="moodle_auto_format"><text>Incorrect. FCR is about whether the issue was solved on the first attempt, not whether the customer returned after closure.</text></feedback>
+    </answer>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>Complaint Recurrence Probability (mean(Repeat_Contact_Flag))</text>
+      <feedback format="moodle_auto_format"><text>Correct. Repeat_Contact_Flag directly measures the probability of customers re-contacting after closure.</text></feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>Average Response Time (mean(Response_Minutes))</text>
+      <feedback format="moodle_auto_format"><text>Incorrect. Response time measures initial acknowledgment speed, not re-contact after closure.</text></feedback>
+    </answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text>Q2. Response Speed vs Correctness</text></name>
+    <questiontext format="moodle_auto_format"><text>Average Response Time improves significantly, but First Contact Resolution Rate does not change. What is the most accurate interpretation?</text></questiontext>
+    <generalfeedback format="moodle_auto_format"><text /></generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>Customers are acknowledged faster, but first-time closure correctness has not improved.</text>
+      <feedback format="moodle_auto_format"><text>Correct. Response_Minutes improved, but First_Contact_Resolution_Flag did not, so speed improved without improving correctness.</text></feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>Mean Resolution Time must decrease automatically because response is faster.</text>
+      <feedback format="moodle_auto_format"><text>Incorrect. A faster first response does not guarantee faster closure; handling and handoffs may still dominate resolution time.</text></feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>Customer Effort Score must decrease automatically because response is faster.</text>
+      <feedback format="moodle_auto_format"><text>Incorrect. Effort is driven by follow-ups, handoffs, and repeated explanations; speed alone may not reduce effort.</text></feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>Repeat Contact Probability must fall automatically because customers received a first response quickly.</text>
+      <feedback format="moodle_auto_format"><text>Incorrect. Customers can still re-contact if closure is incomplete or not trusted, even with fast initial acknowledgment.</text></feedback>
+    </answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text>Q3. Same Resolution Time, Different Effort</text></name>
+    <questiontext format="moodle_auto_format"><text>Two channels have similar Mean Resolution Time, but Channel A has a much higher Customer Effort Score. What is the most plausible cause?</text></questiontext>
+    <generalfeedback format="moodle_auto_format"><text /></generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>Channel A is closing tickets too quickly, so effort rises by definition.</text>
+      <feedback format="moodle_auto_format"><text>Incorrect. Faster closure does not mechanically increase effort; effort reflects customer friction and repeated actions.</text></feedback>
+    </answer>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>Channel A likely causes more follow-ups, handoffs, or repeated explanations during handling.</text>
+      <feedback format="moodle_auto_format"><text>Correct. Customer_Effort_Score captures friction such as repeated contacts and handoffs, even if total closure time is similar.</text></feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>Channel A must have higher sentiment scores, which directly increases effort.</text>
+      <feedback format="moodle_auto_format"><text>Incorrect. Sentiment and effort may correlate, but sentiment does not directly define effort; process friction drives effort.</text></feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>Customer Effort Score is redundant if Mean Resolution Time is the same.</text>
+      <feedback format="moodle_auto_format"><text>Incorrect. Time and effort measure different breakdowns; equal time does not imply equal friction.</text></feedback>
+    </answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text>Q4. Predictive Analytics Without ML</text></name>
+    <questiontext format="moodle_auto_format"><text>Predictive analytics here uses system logic, not ML. If ticket arrivals increase by 15 percent while response and escalation rules remain unchanged, what is the most likely outcome?</text></questiontext>
+    <generalfeedback format="moodle_auto_format"><text /></generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>KPIs remain stable because policies did not change.</text>
+      <feedback format="moodle_auto_format"><text>Incorrect. Higher arrivals increase congestion and delays even if policies are unchanged.</text></feedback>
+    </answer>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>Response and/or resolution delays increase, which increases effort and repeat contacts.</text>
+      <feedback format="moodle_auto_format"><text>Correct. With higher arrivals and unchanged rules, delays compound, and customers typically follow up more often.</text></feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>First Contact Resolution Rate increases because agents see more tickets.</text>
+      <feedback format="moodle_auto_format"><text>Incorrect. Higher volume does not improve correctness; it usually increases rework and reduces effective quality.</text></feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>Customer Effort Score decreases because customers become more tolerant over time.</text>
+      <feedback format="moodle_auto_format"><text>Incorrect. Higher delays usually increase follow-ups and friction, not tolerance.</text></feedback>
+    </answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text>Q5. Percentile-Based Policy Trigger</text></name>
+    <questiontext format="moodle_auto_format"><text>You propose a policy trigger: escalate if Priority is High/Critical AND sentiment is negative AND Response_Minutes is above the 75th percentile. Why use a percentile threshold instead of a fixed number of minutes?</text></questiontext>
+    <generalfeedback format="moodle_auto_format"><text /></generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>It adapts to the current performance distribution and consistently targets the slow tail.</text>
+      <feedback format="moodle_auto_format"><text>Correct. Percentiles track relative performance and flag the worst delays even as overall speed changes.</text></feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>It guarantees that exactly 75 percent of tickets will be escalated.</text>
+      <feedback format="moodle_auto_format"><text>Incorrect. Above the 75th percentile means roughly the slowest 25 percent meet the speed condition, but other conditions also apply.</text></feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>It removes the need to compute Response_Minutes and simplifies the dataset.</text>
+      <feedback format="moodle_auto_format"><text>Incorrect. Percentiles still require Response_Minutes; they are computed from its distribution.</text></feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>It ensures escalation is based only on sentiment, not speed.</text>
+      <feedback format="moodle_auto_format"><text>Incorrect. The trigger explicitly includes speed (Response_Minutes) in addition to sentiment and priority.</text></feedback>
+    </answer>
+  </question>
+</quiz>
