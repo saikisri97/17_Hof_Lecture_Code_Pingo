@@ -1,0 +1,208 @@
+<?xml version='1.0' encoding='utf-8'?>
+<quiz>
+  <question type="multichoice">
+    <name>
+      <text>Q16. East capacity reduction: baseline run</text>
+    </name>
+    <questiontext format="moodle_auto_format">
+      <text>In Prescriptive Analytics Experiment 1, reset to baseline: East capacity 600, West capacity 500, and total required demand 1,100 units. Reduce only East capacity to 500. Demand must be met exactly and no shortage variables are allowed. What is the result?</text>
+    </questiontext>
+    <generalfeedback format="moodle_auto_format">
+      <text>Total capacity becomes 500+500=1,000 units against 1,100 units of required demand. The 100-unit shortfall makes the LP infeasible. No optimal cost or shipment plan is available. Redistributing flows cannot create capacity.</text>
+    </generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>An optimal plan with a moderately higher cost.</text>
+      <feedback format="moodle_auto_format">
+        <text>Incorrect. Total capacity becomes 500+500=1,000 units against 1,100 units of required demand. The 100-unit shortfall makes the LP infeasible. No optimal cost or shipment plan is available. Redistributing flows cannot create capacity.</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>An optimal plan with a lower cost.</text>
+      <feedback format="moodle_auto_format">
+        <text>Incorrect. Total capacity becomes 500+500=1,000 units against 1,100 units of required demand. The 100-unit shortfall makes the LP infeasible. No optimal cost or shipment plan is available. Redistributing flows cannot create capacity.</text>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>The LP is infeasible, so there is no valid optimal cost or shipment plan.</text>
+      <feedback format="moodle_auto_format">
+        <text>Correct. Total capacity becomes 500+500=1,000 units against 1,100 units of required demand. The 100-unit shortfall makes the LP infeasible. No optimal cost or shipment plan is available. Redistributing flows cannot create capacity.</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>An optimal plan with unchanged cost.</text>
+      <feedback format="moodle_auto_format">
+        <text>Incorrect. Total capacity becomes 500+500=1,000 units against 1,100 units of required demand. The 100-unit shortfall makes the LP infeasible. No optimal cost or shipment plan is available. Redistributing flows cannot create capacity.</text>
+      </feedback>
+    </answer>
+  </question>
+  <question type="multichoice">
+    <name>
+      <text>Q17. Store_C demand increase: baseline run</text>
+    </name>
+    <questiontext format="moodle_auto_format">
+      <text>In Prescriptive Analytics Experiment 2, reset to baseline capacities East=600 and West=500. Increase only Store_C demand from 350 to 450, keeping Store_A=250, Store_B=300 and Store_D=200. Demand must be met exactly. What is the solver outcome?</text>
+    </questiontext>
+    <generalfeedback format="moodle_auto_format">
+      <text>Demand becomes 250+300+450+200=1,200 units, exceeding capacity 600+500=1,100 by 100 units. The model is infeasible and reports no valid shipment plan or minimum cost. It does not automatically allow unmet demand or add North.</text>
+    </generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>An optimal plan in which West supplies all additional demand.</text>
+      <feedback format="moodle_auto_format">
+        <text>Incorrect. Demand becomes 250+300+450+200=1,200 units, exceeding capacity 600+500=1,100 by 100 units. The model is infeasible and reports no valid shipment plan or minimum cost. It does not automatically allow unmet demand or add North.</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>An optimal plan in which East supplies all additional demand.</text>
+      <feedback format="moodle_auto_format">
+        <text>Incorrect. Demand becomes 250+300+450+200=1,200 units, exceeding capacity 600+500=1,100 by 100 units. The model is infeasible and reports no valid shipment plan or minimum cost. It does not automatically allow unmet demand or add North.</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>An optimal plan using North, even though North has not been added.</text>
+      <feedback format="moodle_auto_format">
+        <text>Incorrect. Demand becomes 250+300+450+200=1,200 units, exceeding capacity 600+500=1,100 by 100 units. The model is infeasible and reports no valid shipment plan or minimum cost. It does not automatically allow unmet demand or add North.</text>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>Infeasible: total demand is 1,200 units but capacity is only 1,100.</text>
+      <feedback format="moodle_auto_format">
+        <text>Correct. Demand becomes 250+300+450+200=1,200 units, exceeding capacity 600+500=1,100 by 100 units. The model is infeasible and reports no valid shipment plan or minimum cost. It does not automatically allow unmet demand or add North.</text>
+      </feedback>
+    </answer>
+  </question>
+  <question type="multichoice">
+    <name>
+      <text>Q18. West route surcharge: baseline run</text>
+    </name>
+    <questiontext format="moodle_auto_format">
+      <text>In Prescriptive Analytics Experiment 3, reset to the two-DC baseline: East capacity 600, West capacity 500, exact total demand 1,100, and minimum transport cost EUR 4,600. Add EUR 2 per unit to every West route, keeping all other inputs fixed. What follows?</text>
+    </questiontext>
+    <generalfeedback format="moodle_auto_format">
+      <text>Balanced total capacity and demand force West to ship 500 units in every feasible plan. The uniform surcharge therefore adds 500 x EUR 2 = EUR 1,000 to every feasible plan. The minimum cost becomes EUR 5,600. The surcharge need not change the optimal allocation. Alternative optimal route allocations can exist.</text>
+    </generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>West must still ship 500 units, and minimum transport cost rises to EUR 5,600.</text>
+      <feedback format="moodle_auto_format">
+        <text>Correct. Balanced total capacity and demand force West to ship 500 units in every feasible plan. The uniform surcharge therefore adds 500 x EUR 2 = EUR 1,000 to every feasible plan. The minimum cost becomes EUR 5,600. The surcharge need not change the optimal allocation. Alternative optimal route allocations can exist.</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>West becomes unused, and minimum transport cost falls.</text>
+      <feedback format="moodle_auto_format">
+        <text>Incorrect. Balanced total capacity and demand force West to ship 500 units in every feasible plan. The uniform surcharge therefore adds 500 x EUR 2 = EUR 1,000 to every feasible plan. The minimum cost becomes EUR 5,600. The surcharge need not change the optimal allocation. Alternative optimal route allocations can exist.</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>West ships only 400 units while all 1,100 units of demand are still met by the two DCs.</text>
+      <feedback format="moodle_auto_format">
+        <text>Incorrect. Balanced total capacity and demand force West to ship 500 units in every feasible plan. The uniform surcharge therefore adds 500 x EUR 2 = EUR 1,000 to every feasible plan. The minimum cost becomes EUR 5,600. The surcharge need not change the optimal allocation. Alternative optimal route allocations can exist.</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>The minimum transport cost remains EUR 4,600.</text>
+      <feedback format="moodle_auto_format">
+        <text>Incorrect. Balanced total capacity and demand force West to ship 500 units in every feasible plan. The uniform surcharge therefore adds 500 x EUR 2 = EUR 1,000 to every feasible plan. The minimum cost becomes EUR 5,600. The surcharge need not change the optimal allocation. Alternative optimal route allocations can exist.</text>
+      </feedback>
+    </answer>
+  </question>
+  <question type="multichoice">
+    <name>
+      <text>Q19. North capacity: specified cost run</text>
+    </name>
+    <questiontext format="moodle_auto_format">
+      <text>In Prescriptive Analytics Experiment 4, reset to the original baseline and add optional North capacity of 300 units. North costs to A/B/C/D are EUR 5/4/4/5 per unit. Keep original demands and East/West inputs unchanged. Exclude facility opening and operating costs. What is the new minimum transport cost?</text>
+    </questiontext>
+    <generalfeedback format="moodle_auto_format">
+      <text>The executed LP gives minimum transport cost EUR 4,300 versus EUR 4,600 at baseline, a signed change of -EUR 300. This result depends on the stated North route costs. It measures transport cost only and is insufficient by itself to justify opening a real facility.</text>
+    </generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>EUR 5,600, an increase of EUR 1,000.</text>
+      <feedback format="moodle_auto_format">
+        <text>Incorrect. The executed LP gives minimum transport cost EUR 4,300 versus EUR 4,600 at baseline, a signed change of -EUR 300. This result depends on the stated North route costs. It measures transport cost only and is insufficient by itself to justify opening a real facility.</text>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>EUR 4,300, a decrease of EUR 300 from the EUR 4,600 baseline.</text>
+      <feedback format="moodle_auto_format">
+        <text>Correct. The executed LP gives minimum transport cost EUR 4,300 versus EUR 4,600 at baseline, a signed change of -EUR 300. This result depends on the stated North route costs. It measures transport cost only and is insufficient by itself to justify opening a real facility.</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>EUR 4,600, exactly unchanged.</text>
+      <feedback format="moodle_auto_format">
+        <text>Incorrect. The executed LP gives minimum transport cost EUR 4,300 versus EUR 4,600 at baseline, a signed change of -EUR 300. This result depends on the stated North route costs. It measures transport cost only and is insufficient by itself to justify opening a real facility.</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>No valid cost exists because adding optional capacity makes the model infeasible.</text>
+      <feedback format="moodle_auto_format">
+        <text>Incorrect. The executed LP gives minimum transport cost EUR 4,300 versus EUR 4,600 at baseline, a signed change of -EUR 300. This result depends on the stated North route costs. It measures transport cost only and is insufficient by itself to justify opening a real facility.</text>
+      </feedback>
+    </answer>
+  </question>
+  <question type="multichoice">
+    <name>
+      <text>Q20. West cap with North retained: specified run</text>
+    </name>
+    <questiontext format="moodle_auto_format">
+      <text>In Prescriptive Analytics Experiment 5, retain North capacity 300 with costs A/B/C/D=EUR 5/4/4/5 per unit. Keep East=600, West physical capacity=500 and original total demand=1,100. Change the West shipment limit from 500 to 400. Compare against the North-added reference cost of EUR 4,300. What happens?</text>
+    </questiontext>
+    <generalfeedback format="moodle_auto_format">
+      <text>With North retained, effective capacity is 600+300+400=1,300 units. The LP remains feasible and minimum transport cost becomes EUR 4,400, an increase of EUR 100 relative to the North-added reference. Applying the same West cap without North would leave only 1,000 units of capacity and would be infeasible.</text>
+    </generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>The LP is infeasible because effective total capacity becomes 1,000 units.</text>
+      <feedback format="moodle_auto_format">
+        <text>Incorrect. With North retained, effective capacity is 600+300+400=1,300 units. The LP remains feasible and minimum transport cost becomes EUR 4,400, an increase of EUR 100 relative to the North-added reference. Applying the same West cap without North would leave only 1,000 units of capacity and would be infeasible.</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>Minimum transport cost remains EUR 4,300.</text>
+      <feedback format="moodle_auto_format">
+        <text>Incorrect. With North retained, effective capacity is 600+300+400=1,300 units. The LP remains feasible and minimum transport cost becomes EUR 4,400, an increase of EUR 100 relative to the North-added reference. Applying the same West cap without North would leave only 1,000 units of capacity and would be infeasible.</text>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>The LP stays feasible, and minimum transport cost rises to EUR 4,400.</text>
+      <feedback format="moodle_auto_format">
+        <text>Correct. With North retained, effective capacity is 600+300+400=1,300 units. The LP remains feasible and minimum transport cost becomes EUR 4,400, an increase of EUR 100 relative to the North-added reference. Applying the same West cap without North would leave only 1,000 units of capacity and would be infeasible.</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>Minimum transport cost drops to EUR 3,300.</text>
+      <feedback format="moodle_auto_format">
+        <text>Incorrect. With North retained, effective capacity is 600+300+400=1,300 units. The LP remains feasible and minimum transport cost becomes EUR 4,400, an increase of EUR 100 relative to the North-added reference. Applying the same West cap without North would leave only 1,000 units of capacity and would be infeasible.</text>
+      </feedback>
+    </answer>
+  </question>
+</quiz>

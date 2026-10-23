@@ -1,0 +1,208 @@
+<?xml version='1.0' encoding='utf-8'?>
+<quiz>
+  <question type="multichoice">
+    <name>
+      <text>Q11. Promotion frequency: seeded run</text>
+    </name>
+    <questiontext format="moodle_auto_format">
+      <text>In Predictive Analytics Experiment 1, change PROMO_PROBABILITY from 0.20 to 0.40, using seed 123 and the same 180 dates. Refit and evaluate on the final 30 dates. What happens to regression MAE in this run?</text>
+    </questiontext>
+    <generalfeedback format="moodle_auto_format">
+      <text>The executed run gives MAE 15.435265 before and 15.211673 after, a signed change of -0.223592 units/day. Lower MAE means better observed accuracy. This experiment changes both training and test demand, so it is an environment comparison rather than a controlled comparison of models on identical targets.</text>
+    </generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>MAE falls slightly, from about 15.435 to 15.212 units/day.</text>
+      <feedback format="moodle_auto_format">
+        <text>Correct. The executed run gives MAE 15.435265 before and 15.211673 after, a signed change of -0.223592 units/day. Lower MAE means better observed accuracy. This experiment changes both training and test demand, so it is an environment comparison rather than a controlled comparison of models on identical targets.</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>MAE rises, from about 15.435 to 17.224 units/day.</text>
+      <feedback format="moodle_auto_format">
+        <text>Incorrect. The executed run gives MAE 15.435265 before and 15.211673 after, a signed change of -0.223592 units/day. Lower MAE means better observed accuracy. This experiment changes both training and test demand, so it is an environment comparison rather than a controlled comparison of models on identical targets.</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>MAE remains exactly unchanged.</text>
+      <feedback format="moodle_auto_format">
+        <text>Incorrect. The executed run gives MAE 15.435265 before and 15.211673 after, a signed change of -0.223592 units/day. Lower MAE means better observed accuracy. This experiment changes both training and test demand, so it is an environment comparison rather than a controlled comparison of models on identical targets.</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>MAE becomes zero.</text>
+      <feedback format="moodle_auto_format">
+        <text>Incorrect. The executed run gives MAE 15.435265 before and 15.211673 after, a signed change of -0.223592 units/day. Lower MAE means better observed accuracy. This experiment changes both training and test demand, so it is an environment comparison rather than a controlled comparison of models on identical targets.</text>
+      </feedback>
+    </answer>
+  </question>
+  <question type="multichoice">
+    <name>
+      <text>Q12. Removing Lag1: seeded run</text>
+    </name>
+    <questiontext format="moodle_auto_format">
+      <text>In Predictive Analytics Experiment 2, start from the original baseline data and set USE_LAG1 from True to False. Keep the same 149 training rows and 30 test rows. What happens to regression MAE in this run?</text>
+    </questiontext>
+    <generalfeedback format="moodle_auto_format">
+      <text>MAE falls from 15.435265 to 15.403244 units/day. The signed change is about -0.032022 units/day. Removing Lag1 slightly improves this holdout result. The dates and test targets remain identical. This single result does not establish that lag features are generally unhelpful.</text>
+    </generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>MAE increases substantially because a lag must always improve a forecast.</text>
+      <feedback format="moodle_auto_format">
+        <text>Incorrect. MAE falls from 15.435265 to 15.403244 units/day. The signed change is about -0.032022 units/day. Removing Lag1 slightly improves this holdout result. The dates and test targets remain identical. This single result does not establish that lag features are generally unhelpful.</text>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>MAE falls slightly, from about 15.435 to 15.403 units/day.</text>
+      <feedback format="moodle_auto_format">
+        <text>Correct. MAE falls from 15.435265 to 15.403244 units/day. The signed change is about -0.032022 units/day. Removing Lag1 slightly improves this holdout result. The dates and test targets remain identical. This single result does not establish that lag features are generally unhelpful.</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>MAE remains exactly unchanged.</text>
+      <feedback format="moodle_auto_format">
+        <text>Incorrect. MAE falls from 15.435265 to 15.403244 units/day. The signed change is about -0.032022 units/day. Removing Lag1 slightly improves this holdout result. The dates and test targets remain identical. This single result does not establish that lag features are generally unhelpful.</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>The chronological split becomes invalid when Lag1 is removed from the feature list.</text>
+      <feedback format="moodle_auto_format">
+        <text>Incorrect. MAE falls from 15.435265 to 15.403244 units/day. The signed change is about -0.032022 units/day. Removing Lag1 slightly improves this holdout result. The dates and test targets remain identical. This single result does not establish that lag features are generally unhelpful.</text>
+      </feedback>
+    </answer>
+  </question>
+  <question type="multichoice">
+    <name>
+      <text>Q13. Extra demand noise: seeded run</text>
+    </name>
+    <questiontext format="moodle_auto_format">
+      <text>In Predictive Analytics Experiment 3, start from the baseline demand series and change NOISE_AMPLITUDE from 0 to 20 units/day. Use seed 456 to add integer shocks from -20 through +20 to all 180 observations, rebuild Lag1, and refit. What happens to regression MAE?</text>
+    </questiontext>
+    <generalfeedback format="moodle_auto_format">
+      <text>MAE rises from 15.435265 to 17.223797 units/day, a signed change of +1.788531 units/day. These shocks change both training and test demand. Lag1 must be rebuilt from the changed series. The exercise measures forecast error, not coefficient stability across repeated samples.</text>
+    </generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>MAE falls to about 14.257 units/day.</text>
+      <feedback format="moodle_auto_format">
+        <text>Incorrect. MAE rises from 15.435265 to 17.223797 units/day, a signed change of +1.788531 units/day. These shocks change both training and test demand. Lag1 must be rebuilt from the changed series. The exercise measures forecast error, not coefficient stability across repeated samples.</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>MAE stays at about 15.435 units/day.</text>
+      <feedback format="moodle_auto_format">
+        <text>Incorrect. MAE rises from 15.435265 to 17.223797 units/day, a signed change of +1.788531 units/day. These shocks change both training and test demand. Lag1 must be rebuilt from the changed series. The exercise measures forecast error, not coefficient stability across repeated samples.</text>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>MAE rises from about 15.435 to 17.224 units/day.</text>
+      <feedback format="moodle_auto_format">
+        <text>Correct. MAE rises from 15.435265 to 17.223797 units/day, a signed change of +1.788531 units/day. These shocks change both training and test demand. Lag1 must be rebuilt from the changed series. The exercise measures forecast error, not coefficient stability across repeated samples.</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>MAE becomes zero because Lag1 is rebuilt.</text>
+      <feedback format="moodle_auto_format">
+        <text>Incorrect. MAE rises from 15.435265 to 17.223797 units/day, a signed change of +1.788531 units/day. These shocks change both training and test demand. Lag1 must be rebuilt from the changed series. The exercise measures forecast error, not coefficient stability across repeated samples.</text>
+      </feedback>
+    </answer>
+  </question>
+  <question type="multichoice">
+    <name>
+      <text>Q14. Weekend feature: seeded run</text>
+    </name>
+    <questiontext format="moodle_auto_format">
+      <text>In Predictive Analytics Experiment 4, use the unchanged baseline data and change ADD_WEEKEND from False to True. Add IsWeekend=(DoW&gt;=5) alongside Promo, numeric DoW and Lag1, keeping the same train/test rows. Which result matches this run?</text>
+    </questiontext>
+    <generalfeedback format="moodle_auto_format">
+      <text>The executed holdout MAE falls from 15.435265 to 14.257068 units/day, a signed change of -1.178198 units/day. IsWeekend offers a different representation of information already contained in DoW. The improvement in this run does not guarantee improvement on future data.</text>
+    </generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>MAE rises to about 17.224 units/day.</text>
+      <feedback format="moodle_auto_format">
+        <text>Incorrect. The executed holdout MAE falls from 15.435265 to 14.257068 units/day, a signed change of -1.178198 units/day. IsWeekend offers a different representation of information already contained in DoW. The improvement in this run does not guarantee improvement on future data.</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>MAE remains exactly unchanged.</text>
+      <feedback format="moodle_auto_format">
+        <text>Incorrect. The executed holdout MAE falls from 15.435265 to 14.257068 units/day, a signed change of -1.178198 units/day. IsWeekend offers a different representation of information already contained in DoW. The improvement in this run does not guarantee improvement on future data.</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>Adding IsWeekend proves that future forecasts will always improve.</text>
+      <feedback format="moodle_auto_format">
+        <text>Incorrect. The executed holdout MAE falls from 15.435265 to 14.257068 units/day, a signed change of -1.178198 units/day. IsWeekend offers a different representation of information already contained in DoW. The improvement in this run does not guarantee improvement on future data.</text>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>MAE falls from about 15.435 to 14.257 units/day.</text>
+      <feedback format="moodle_auto_format">
+        <text>Correct. The executed holdout MAE falls from 15.435265 to 14.257068 units/day, a signed change of -1.178198 units/day. IsWeekend offers a different representation of information already contained in DoW. The improvement in this run does not guarantee improvement on future data.</text>
+      </feedback>
+    </answer>
+  </question>
+  <question type="multichoice">
+    <name>
+      <text>Q15. Tomorrow promotion comparison: seeded run</text>
+    </name>
+    <questiontext format="moodle_auto_format">
+      <text>In Predictive Analytics Experiment 5, use the original baseline data, refit a separate baseline-feature model on all 179 observed feature rows, and change CHOSEN_PROMO from 0 to 1. Hold tomorrow's date, weekday and latest observed demand fixed. What is the chosen forecast minus the no-promotion reference forecast?</text>
+    </questiontext>
+    <generalfeedback format="moodle_auto_format">
+      <text>The forecast difference is +51.119570 units/day, equal to this fitted model's Promo coefficient. This is a model-based comparison with other inputs fixed. It does not prove real-world causal uplift, promotion profitability or an optimal replenishment quantity. The all-history operational refit is separate from holdout MAE evaluation.</text>
+    </generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>Approximately -51.12 units/day.</text>
+      <feedback format="moodle_auto_format">
+        <text>Incorrect. The forecast difference is +51.119570 units/day, equal to this fitted model's Promo coefficient. This is a model-based comparison with other inputs fixed. It does not prove real-world causal uplift, promotion profitability or an optimal replenishment quantity. The all-history operational refit is separate from holdout MAE evaluation.</text>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>Approximately +51.12 units/day.</text>
+      <feedback format="moodle_auto_format">
+        <text>Correct. The forecast difference is +51.119570 units/day, equal to this fitted model's Promo coefficient. This is a model-based comparison with other inputs fixed. It does not prove real-world causal uplift, promotion profitability or an optimal replenishment quantity. The all-history operational refit is separate from holdout MAE evaluation.</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>Exactly zero units/day.</text>
+      <feedback format="moodle_auto_format">
+        <text>Incorrect. The forecast difference is +51.119570 units/day, equal to this fitted model's Promo coefficient. This is a model-based comparison with other inputs fixed. It does not prove real-world causal uplift, promotion profitability or an optimal replenishment quantity. The all-history operational refit is separate from holdout MAE evaluation.</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>Approximately +1,000 units/day.</text>
+      <feedback format="moodle_auto_format">
+        <text>Incorrect. The forecast difference is +51.119570 units/day, equal to this fitted model's Promo coefficient. This is a model-based comparison with other inputs fixed. It does not prove real-world causal uplift, promotion profitability or an optimal replenishment quantity. The all-history operational refit is separate from holdout MAE evaluation.</text>
+      </feedback>
+    </answer>
+  </question>
+</quiz>
