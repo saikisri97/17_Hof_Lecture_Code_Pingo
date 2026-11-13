@@ -1,0 +1,14 @@
+Shipment_ID,Carrier,Delivery_Time_hrs,SLA_hrs,Notes
+S001,A,10.0,24,Delivered
+S002, a ,12.0,24,
+S002, a ,12.0,24,
+S003,A,14.0,24,
+S004,B,16.0,24,
+S005,B,18.0,24,
+S006,B,72.0,24,Customs hold
+S007,B,,12,Awaiting proof
+S008,B,-4.0,12,Timestamp error
+S009,A,8.0,12,
+S010,A,9.0,12,
+S011,B,20.0,24,
+S012,A,22.0,24,

@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quiz>
+
+  <question type="multichoice">
+    <name><text>Q1. Which column directly enables the OTIF calculation?</text></name>
+    <questiontext format="moodle_auto_format"><text>Which column directly enables the OTIF calculation?</text></questiontext>
+    <generalfeedback format="moodle_auto_format"><text /></generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>Mode</text>
+      <feedback format="moodle_auto_format"><text>Incorrect. Mode indicates transport type, not delivery success.</text></feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>LeadTime_days</text>
+      <feedback format="moodle_auto_format"><text>Incorrect. Lead time is delivery duration, not the Boolean flag.</text></feedback>
+    </answer>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>OnTime</text>
+      <feedback format="moodle_auto_format"><text>Correct. OTIF = mean(OnTime). It’s the Boolean KPI foundation.</text></feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>Performance</text>
+      <feedback format="moodle_auto_format"><text>Incorrect. Performance is a derived KPI, not the base column.</text></feedback>
+    </answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text>Q2. Why is LateBy_days important even though we already have OnTime?</text></name>
+    <questiontext format="moodle_auto_format"><text>Why is LateBy_days important even though we already have OnTime?</text></questiontext>
+    <generalfeedback format="moodle_auto_format"><text /></generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>It’s just redundant</text>
+      <feedback format="moodle_auto_format"><text>Incorrect. It adds valuable delay severity insight.</text></feedback>
+    </answer>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>It helps measure delay severity for penalty analysis</text>
+      <feedback format="moodle_auto_format"><text>Correct. LateBy_days defines escalation and SLA breach analysis.</text></feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>It speeds up Python code</text>
+      <feedback format="moodle_auto_format"><text>Incorrect. It’s an analytical column, not for performance.</text></feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>It has no real meaning</text>
+      <feedback format="moodle_auto_format"><text>Incorrect. It carries essential operational insight.</text></feedback>
+    </answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text>Q3. What is the main advantage of using .apply() in Python?</text></name>
+    <questiontext format="moodle_auto_format"><text>What is the main advantage of using .apply() in Python?</text></questiontext>
+    <generalfeedback format="moodle_auto_format"><text /></generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>It draws charts automatically</text>
+      <feedback format="moodle_auto_format"><text>Incorrect. Visualization requires other libraries.</text></feedback>
+    </answer>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>It allows row-wise business rules like Good / Acceptable / Critical</text>
+      <feedback format="moodle_auto_format"><text>Correct. .apply() applies logic row-by-row for conditional rules.</text></feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>It replaces SQL joins</text>
+      <feedback format="moodle_auto_format"><text>Incorrect. Joins use merge(), not apply().</text></feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>It deletes missing data</text>
+      <feedback format="moodle_auto_format"><text>Incorrect. .dropna() is used for that purpose.</text></feedback>
+    </answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text>Q4. Why do we round costs and add surcharges?</text></name>
+    <questiontext format="moodle_auto_format"><text>Why do we round costs and add surcharges?</text></questiontext>
+    <generalfeedback format="moodle_auto_format"><text /></generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>To make reports cleaner and simulate pricing changes</text>
+      <feedback format="moodle_auto_format"><text>Correct. Cost rounding and surcharges mirror financial adjustments in transport costing.</text></feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>To reduce dataset size</text>
+      <feedback format="moodle_auto_format"><text>Incorrect. It does not affect data volume.</text></feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>To hide actual numbers</text>
+      <feedback format="moodle_auto_format"><text>Incorrect. Transparency is still preserved in reports.</text></feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>To debug calculations</text>
+      <feedback format="moodle_auto_format"><text>Incorrect. Debugging is unrelated to cost adjustments.</text></feedback>
+    </answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text>Q5. What happens if you fill missing Cost_EUR with the mode-level average?</text></name>
+    <questiontext format="moodle_auto_format"><text>What happens if you fill missing Cost_EUR with the mode-level average?</text></questiontext>
+    <generalfeedback format="moodle_auto_format"><text /></generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>You distort all costs</text>
+      <feedback format="moodle_auto_format"><text>Incorrect. It maintains consistency within each mode.</text></feedback>
+    </answer>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>You restore completeness without biasing across modes</text>
+      <feedback format="moodle_auto_format"><text>Correct. Mode-level imputation maintains distribution and avoids global distortion.</text></feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>You reduce computation time</text>
+      <feedback format="moodle_auto_format"><text>Incorrect. Imputation does not affect runtime significantly.</text></feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>You lose data integrity</text>
+      <feedback format="moodle_auto_format"><text>Incorrect. Proper imputation enhances integrity.</text></feedback>
+    </answer>
+  </question>
+
+</quiz>

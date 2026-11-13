@@ -1,0 +1,135 @@
+{
+  "audit": {
+    "Raw export rows": 206,
+    "Exact repeats removed": 3,
+    "Invalid-date records quarantined": 1,
+    "Conflicting records quarantined": 2,
+    "Calendar SKU/weeks": 208,
+    "Known sales weeks": 198,
+    "Unknown sales weeks": 10
+  },
+  "promo": [
+    {
+      "SKU": "SKU_A",
+      "Nonpromo weeks": 86,
+      "Promo weeks": 15,
+      "Nonpromo mean (units/week)": 148.43023255813952,
+      "Promo mean (units/week)": 263.06666666666666,
+      "Observed mean gap (%)": 77.23253688471081
+    },
+    {
+      "SKU": "SKU_B",
+      "Nonpromo weeks": 83,
+      "Promo weeks": 14,
+      "Nonpromo mean (units/week)": 201.19277108433735,
+      "Promo mean (units/week)": 350.85714285714283,
+      "Observed mean gap (%)": 74.38854336872181
+    }
+  ],
+  "window3": [
+    {
+      "SKU": "SKU_A",
+      "Method": "Naive",
+      "Test calendar weeks": 20,
+      "Scored weeks": 20,
+      "Unscored weeks": 0,
+      "MAE (units/week)": 23.2,
+      "Bias (forecast - actual)": -0.5
+    },
+    {
+      "SKU": "SKU_A",
+      "Method": "MA_3",
+      "Test calendar weeks": 20,
+      "Scored weeks": 20,
+      "Unscored weeks": 0,
+      "MAE (units/week)": 20.666666666666664,
+      "Bias (forecast - actual)": -0.1
+    },
+    {
+      "SKU": "SKU_B",
+      "Method": "Naive",
+      "Test calendar weeks": 20,
+      "Scored weeks": 2,
+      "Unscored weeks": 18,
+      "MAE (units/week)": 15.5,
+      "Bias (forecast - actual)": 15.5
+    },
+    {
+      "SKU": "SKU_B",
+      "Method": "MA_3",
+      "Test calendar weeks": 20,
+      "Scored weeks": 2,
+      "Unscored weeks": 18,
+      "MAE (units/week)": 15.0,
+      "Bias (forecast - actual)": 8.333333333333343
+    }
+  ],
+  "window6": [
+    {
+      "SKU": "SKU_A",
+      "Method": "Naive",
+      "Test calendar weeks": 20,
+      "Scored weeks": 20,
+      "Unscored weeks": 0,
+      "MAE (units/week)": 23.2,
+      "Bias (forecast - actual)": -0.5
+    },
+    {
+      "SKU": "SKU_A",
+      "Method": "MA_6",
+      "Test calendar weeks": 20,
+      "Scored weeks": 20,
+      "Unscored weeks": 0,
+      "MAE (units/week)": 26.799999999999994,
+      "Bias (forecast - actual)": 13.766666666666662
+    },
+    {
+      "SKU": "SKU_B",
+      "Method": "Naive",
+      "Test calendar weeks": 20,
+      "Scored weeks": 2,
+      "Unscored weeks": 18,
+      "MAE (units/week)": 15.5,
+      "Bias (forecast - actual)": 15.5
+    },
+    {
+      "SKU": "SKU_B",
+      "Method": "MA_6",
+      "Test calendar weeks": 20,
+      "Scored weeks": 2,
+      "Unscored weeks": 18,
+      "MAE (units/week)": 18.75,
+      "Bias (forecast - actual)": 18.75
+    }
+  ],
+  "stock_baseline": {
+    "Next-week forecast (units)": 150.33333333333334,
+    "Historical training sales SD (units/week)": 95.18737045337035,
+    "Buffer factor": 1.0,
+    "Buffer stock (units)": 95.18737045337035,
+    "Target stock (units)": 245.52070378670368,
+    "Inventory position (units)": 180.0,
+    "Order quantity, rounded up (units)": 66.0
+  },
+  "stock_inventory90": {
+    "Next-week forecast (units)": 150.33333333333334,
+    "Historical training sales SD (units/week)": 95.18737045337035,
+    "Buffer factor": 1.0,
+    "Buffer stock (units)": 95.18737045337035,
+    "Target stock (units)": 245.52070378670368,
+    "Inventory position (units)": 90.0,
+    "Order quantity, rounded up (units)": 156.0
+  },
+  "stock_factor165": {
+    "Next-week forecast (units)": 150.33333333333334,
+    "Historical training sales SD (units/week)": 95.18737045337035,
+    "Buffer factor": 1.65,
+    "Buffer stock (units)": 157.05916124806106,
+    "Target stock (units)": 307.39249458139443,
+    "Inventory position (units)": 180.0,
+    "Order quantity, rounded up (units)": 128.0
+  },
+  "test_start": "2024-08-11",
+  "test_end": "2024-12-22",
+  "data_policy": "Remove three exact repeated export records under stated teaching assumption; quarantine invalid-date and both conflicting records; negative sales retained as unknown pending interpretation; complete calendar with unknown gaps; no caps or price fills."
+}

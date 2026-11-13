@@ -1,0 +1,152 @@
+<?xml version='1.0' encoding='utf-8'?>
+<quiz>
+  <question type="multichoice">
+    <name><text>Q6. Customs delay impact (Sea)</text></name>
+    <questiontext format="moodle_auto_format">
+      <text>Increasing customs delay for Sea shipments by 2 days changes the Pareto chart in which way?</text>
+    </questiontext>
+    <generalfeedback format="moodle_auto_format"><text /></generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>Air becomes most delayed</text>
+      <feedback format="moodle_auto_format"><text>Try again.</text></feedback>
+    </answer>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>Sea dominates delay causes</text>
+      <feedback format="moodle_auto_format"><text>Correct: Added Sea customs time increases its Pareto share of delays.</text></feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>Road delays rise</text>
+      <feedback format="moodle_auto_format"><text>Try again.</text></feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>Nothing changes</text>
+      <feedback format="moodle_auto_format"><text>Try again.</text></feedback>
+    </answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text>Q7. Road linehaul variability</text></name>
+    <questiontext format="moodle_auto_format">
+      <text>A 1-day increase in Road linehaul time most affects which variable?</text>
+    </questiontext>
+    <generalfeedback format="moodle_auto_format"><text /></generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>SLA target</text>
+      <feedback format="moodle_auto_format"><text>Try again.</text></feedback>
+    </answer>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>Lead time variability</text>
+      <feedback format="moodle_auto_format"><text>Correct: Longer/variable linehaul drives wider delivery time spread.</text></feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>Customs duration</text>
+      <feedback format="moodle_auto_format"><text>Try again.</text></feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>Cost per km</text>
+      <feedback format="moodle_auto_format"><text>Try again.</text></feedback>
+    </answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text>Q8. Raising SLA (Sea)</text></name>
+    <questiontext format="moodle_auto_format">
+      <text>Raising the SLA for Sea shipments from 18 to 20 days will:</text>
+    </questiontext>
+    <generalfeedback format="moodle_auto_format"><text /></generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>Improve OTIF without real performance change</text>
+      <feedback format="moodle_auto_format"><text>Correct: Relaxing the target inflates OTIF but doesn’t change actual times.</text></feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>Reduce lead time</text>
+      <feedback format="moodle_auto_format"><text>Try again.</text></feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>Increase customs time</text>
+      <feedback format="moodle_auto_format"><text>Try again.</text></feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>Have no measurable effect</text>
+      <feedback format="moodle_auto_format"><text>Try again.</text></feedback>
+    </answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text>Q9. Pick and Depart improvements</text></name>
+    <questiontext format="moodle_auto_format">
+      <text>Reducing Pick and Depart times by 20% mainly improves which area?</text>
+    </questiontext>
+    <generalfeedback format="moodle_auto_format"><text /></generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>Port operations</text>
+      <feedback format="moodle_auto_format"><text>Try again.</text></feedback>
+    </answer>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>Warehouse performance</text>
+      <feedback format="moodle_auto_format"><text>Correct: These stages are warehouse-driven and speed up outbound flow.</text></feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>Customer behavior</text>
+      <feedback format="moodle_auto_format"><text>Try again.</text></feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>Documentation accuracy</text>
+      <feedback format="moodle_auto_format"><text>Try again.</text></feedback>
+    </answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text>Q10. Redefining late threshold</text></name>
+    <questiontext format="moodle_auto_format">
+      <text>Redefining "late" as LeadTime &gt; (SLA + 1) has what effect?</text>
+    </questiontext>
+    <generalfeedback format="moodle_auto_format"><text /></generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>More shipments classified as late</text>
+      <feedback format="moodle_auto_format"><text>Try again.</text></feedback>
+    </answer>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>Fewer shipments classified as late</text>
+      <feedback format="moodle_auto_format"><text>Correct: A looser threshold reduces late counts and raises OTIF mechanically.</text></feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>OTIF decreases</text>
+      <feedback format="moodle_auto_format"><text>Try again.</text></feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>No change</text>
+      <feedback format="moodle_auto_format"><text>Try again.</text></feedback>
+    </answer>
+  </question>
+</quiz>

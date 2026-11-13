@@ -1,0 +1,152 @@
+<?xml version='1.0' encoding='utf-8'?>
+<quiz>
+  <question type="multichoice">
+    <name><text>Q1. Air shipments and KPI impact</text></name>
+    <questiontext format="moodle_auto_format">
+      <text>When the share of Air shipments increases from 15% to 40%, which KPI is most affected?</text>
+    </questiontext>
+    <generalfeedback format="moodle_auto_format"><text /></generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>Lead time decreases, cost increases</text>
+      <feedback format="moodle_auto_format"><text>Correct: Air is faster but costlier, so time drops while cost rises.</text></feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>Lead time increases, cost decreases</text>
+      <feedback format="moodle_auto_format"><text>Try again.</text></feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>OTIF decreases sharply</text>
+      <feedback format="moodle_auto_format"><text>Try again.</text></feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>Nothing changes significantly</text>
+      <feedback format="moodle_auto_format"><text>Try again.</text></feedback>
+    </answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text>Q2. SLA reduction effect on OTIF (Road)</text></name>
+    <questiontext format="moodle_auto_format">
+      <text>If the SLA for Road shipments is reduced from 6 to 5 days, what happens to OTIF?</text>
+    </questiontext>
+    <generalfeedback format="moodle_auto_format"><text /></generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>OTIF increases</text>
+      <feedback format="moodle_auto_format"><text>Try again.</text></feedback>
+    </answer>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>OTIF decreases</text>
+      <feedback format="moodle_auto_format"><text>Correct: A stricter SLA makes fewer deliveries on time in full.</text></feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>OTIF remains stable</text>
+      <feedback format="moodle_auto_format"><text>Try again.</text></feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>OTIF becomes 100%</text>
+      <feedback format="moodle_auto_format"><text>Try again.</text></feedback>
+    </answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text>Q3. Random cost variation impact</text></name>
+    <questiontext format="moodle_auto_format">
+      <text>Adding ±20% random variation to transport cost mainly affects which aspect?</text>
+    </questiontext>
+    <generalfeedback format="moodle_auto_format"><text /></generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>Total KPI averages</text>
+      <feedback format="moodle_auto_format"><text>Try again.</text></feedback>
+    </answer>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>Variability and stability of KPIs</text>
+      <feedback format="moodle_auto_format"><text>Correct: Noise mostly increases variance/instability, not the mean level.</text></feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>Delivery speed</text>
+      <feedback format="moodle_auto_format"><text>Try again.</text></feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>Mode distribution</text>
+      <feedback format="moodle_auto_format"><text>Try again.</text></feedback>
+    </answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text>Q4. Lead time capping</text></name>
+    <questiontext format="moodle_auto_format">
+      <text>Capping all lead times at 10 days results in:</text>
+    </questiontext>
+    <generalfeedback format="moodle_auto_format"><text /></generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>Lower OTIF</text>
+      <feedback format="moodle_auto_format"><text>Try again.</text></feedback>
+    </answer>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>Higher OTIF</text>
+      <feedback format="moodle_auto_format"><text>Correct: Shorter measured times push more shipments within SLA windows.</text></feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>No change</text>
+      <feedback format="moodle_auto_format"><text>Try again.</text></feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>More missing data</text>
+      <feedback format="moodle_auto_format"><text>Try again.</text></feedback>
+    </answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text>Q5. New Rail mode</text></name>
+    <questiontext format="moodle_auto_format">
+      <text>Introducing “Rail” as a new mode between Road and Sea likely causes:</text>
+    </questiontext>
+    <generalfeedback format="moodle_auto_format"><text /></generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>Cost to rise sharply</text>
+      <feedback format="moodle_auto_format"><text>Try again.</text></feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>Lead time to worsen</text>
+      <feedback format="moodle_auto_format"><text>Try again.</text></feedback>
+    </answer>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>Balanced trade-off between cost and speed</text>
+      <feedback format="moodle_auto_format"><text>Correct: Rail typically sits between Road and Sea on cost and time.</text></feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>No change in results</text>
+      <feedback format="moodle_auto_format"><text>Try again.</text></feedback>
+    </answer>
+  </question>
+</quiz>

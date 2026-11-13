@@ -1,0 +1,133 @@
+{
+  "chapter_id": "sales-demand",
+  "title": "Sales & Demand Planning",
+  "master_instructions": "/Users/gollapsi/Documents/Slides and Contract Hof/Slides/master prompt/Hof_Master_Slide_Instructions_new.md",
+  "working_code_folder": "/Users/gollapsi/Documents/17_Hof_Lecture_Code_Pingo/SCA_2026/Sales_Demand_Planning",
+  "files": {
+    "student_notebook": "Sales_Demand_Planning_Student.ipynb",
+    "solution_notebook": "Sales_Demand_Planning_Student_Solutions.ipynb",
+    "pingo": "Sales_Demand_Planning_Pingo.xml",
+    "answer_key": "Sales_Demand_Planning_Pingo_Answer_Key.md"
+  },
+  "slides": {
+    "class_pptx": "/Users/gollapsi/Documents/Slides and Contract Hof/Slides/Class Sessions 2026/Sales_Demand_Planning/Sales_Demand_Planning_Class.pptx",
+    "student_pdf": "/Users/gollapsi/Documents/Slides and Contract Hof/Slides/Class Sessions 2026/Sales_Demand_Planning/Sales_Demand_Planning_Student.pdf",
+    "exclude_title_contains": [
+      "Significance of Tasks",
+      "Wrap Up - Pingo",
+      "Solutions:"
+    ],
+    "required_exclusions": [
+      "Significance of Tasks",
+      "Wrap Up - Pingo",
+      "Solutions:"
+    ]
+  },
+  "notebook_links": {
+    "student_colab": null,
+    "solution_colab": null,
+    "student_tinyurl": null,
+    "solution_tinyurl": null,
+    "student_local": "/Users/gollapsi/Documents/17_Hof_Lecture_Code_Pingo/SCA_2026/Sales_Demand_Planning/Sales_Demand_Planning_Student.ipynb",
+    "solution_local": "/Users/gollapsi/Documents/17_Hof_Lecture_Code_Pingo/SCA_2026/Sales_Demand_Planning/Sales_Demand_Planning_Student_Solutions.ipynb",
+    "status": "Local files prepared; Colab destinations pending publication. No unpublished URL is claimed live."
+  },
+  "dataset": {
+    "source": "/Users/gollapsi/Documents/17_Hof_Lecture_Code_Pingo/Supply_Chain_Analytics/data/sales_demand_planning.csv",
+    "kind": "supplied teaching snapshot; real-company provenance unverified",
+    "raw_file": "data/sales_demand_planning_raw.csv",
+    "reviewed_file": "data/sales_demand_planning_reviewed.csv",
+    "quarantine_file": "data/quarantined_records.csv",
+    "loading": "adjacent CSV or byte-identical embedded raw snapshot; version hash checked",
+    "raw_sha256": "e044f37853df000d9760dac449ed94edc219bfd8b0ac7ba60344d9038b377c57",
+    "source_file_sha256": "e044f37853df000d9760dac449ed94edc219bfd8b0ac7ba60344d9038b377c57",
+    "gist_url": null,
+    "gist_version": null,
+    "policy": "data/DATA_POLICY.md"
+  },
+  "forecast_protocol": {
+    "horizon": "one week ahead, rolling origin",
+    "evaluation_calendar_weeks": 20,
+    "test_start": "2024-08-11",
+    "test_end": "2024-12-22",
+    "windows": [
+      3,
+      6
+    ],
+    "benchmark": "last observed preceding calendar week",
+    "common_eligibility": "current actual and all naive/MA3/MA6 predictions nonmissing on same dates per SKU",
+    "scored_counts": {
+      "SKU_A": 20,
+      "SKU_B": 2
+    },
+    "primary_metrics": [
+      "MAE units/week",
+      "mean forecast-minus-actual bias units/week"
+    ]
+  },
+  "examples": [
+    "sales-demand.history",
+    "sales-demand.promotions",
+    "sales-demand.window",
+    "sales-demand.inventory",
+    "sales-demand.buffer"
+  ],
+  "publication": {
+    "git": "local chapter files prepared; not committed or pushed by this task",
+    "gist": "not used",
+    "tinyurl": "not created",
+    "pingo": "XML validated; live import/session not tested",
+    "semester": "WS 26/27 from reference deck"
+  },
+  "validation": {
+    "both_notebooks_executed": true,
+    "all_prescribed_settings_checked": true,
+    "assumptions_and_coverage_disclosed": true,
+    "result_register": "data/verified_results.json",
+    "class_slides": 26,
+    "student_pages": 22,
+    "excluded_class_slides": [
+      20,
+      21,
+      22,
+      23
+    ],
+    "class_sha256": "28ae5c477bdda5da9f9143e6827ea941e5de330c6ea6bde6134b0638f0caeb5b",
+    "student_pdf_verified": true,
+    "notebook_snapshot_fallback_tested": true,
+    "slides_rendered_and_reviewed": true
+  },
+  "visual_teaching": {
+    "replaced_theory_slides": [
+      13,
+      14,
+      16,
+      17
+    ],
+    "instructor_result_plot_slides": [
+      21,
+      22
+    ],
+    "worked_example_period": "2023-01-01 through 2023-02-19; clearly labelled subset, not held-out exercise results",
+    "chart_data": "data/visual_examples.json",
+    "notebook_plots": "Full-history promotion bars; current forecast MAE and coverage; BEFORE/AFTER order bars",
+    "analytical_rules_changed": false,
+    "wording_review": "Visible production comments removed; transitions and uncertainty phrased as lecture content."
+  },
+  "teaching_bridge": {
+    "updated_on": "2026-11-01",
+    "slides": [
+      6,
+      7,
+      8,
+      14,
+      16,
+      17,
+      21,
+      22
+    ],
+    "next_planning_week": "2024-12-29",
+    "notebook_changes": "Decision context, run order, reset guidance and method limitations; code and task results unchanged",
+    "access_status": "Local notebook links; Colab publication pending"
+  }
+}
