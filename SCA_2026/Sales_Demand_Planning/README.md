@@ -1,16 +1,11 @@
-# Sales & Demand Planning
+# Sales & Demand Planning — first chapter
 
-The working source is one class PowerPoint in the chapter slides folder; the student PDF is exported from it. There is no separate student PowerPoint.
+This is the first of eight functional chapters. It assumes no knowledge from the other seven. Terms are introduced within the slides and notebook: sales record, SKU/product code, target, forecast, demand plan, units/week, moving average, naïve forecast, error, MAE, bias and planning horizon.
 
-Run Sales_Demand_Planning_Student.ipynb in Jupyter or upload it to Colab. No external download or upload of the dataset is necessary: the raw snapshot is embedded and supplied in data/. The solution notebook uses the same case/functions/tasks with the prescribed settings and explanations.
+The five guided activities read the history, explore a promotion assumption, compare forecast windows, change the planning horizon and review fixed forecasts against hypothetical actual sales. No inventory or transport knowledge is required. Closing continuity carries only product, period, estimated units and assumptions into the next topic; its methods are introduced there.
 
-Five tasks: verify the history; compare promotion weeks; change forecast window3→6; reset to SKU_A/window3/factor1 and change inventory position180→90; reset position180 and change buffer factor1→1.65. Earlier task settings do not contaminate later stock scenarios.
+Run folded setup cells, Baseline, then Tasks1–5. Edit only the marked setting. Each example uses explicit fixed references. Task4 does not apply Task2's promotion assumption. Task5 compares the original reference with the assumed20% adjustment. A separate final check in Task3 uses a validation-only choice and does not reselect using final scores.
 
-Use the class deck for teaching. Its significance table and Pingo QR remain in the master; they are excluded from the student PDF. Import Sales_Demand_Planning_Pingo.xml into the intended Pingo session; its five questions match these five runs. Live import/session access has not been tested.
+The student and solution notebooks share functions and tasks. Solutions provide answers and explanations, without instructor facilitation. The raw CSV is adjacent and embedded as a hash-checked fallback. See data/DATA_POLICY.md and data/verified_results.json for exact scope and results.
 
-Export again with `python export_student_pdf.py`. The exporter reads chapter.json and excludes slides by title text, checking the required exclusions. It writes a page-selection receipt beside the PDF. Rendering requires LibreOffice; PDF processing requires pypdf.
-
-chapter.json records actual file locations, dataset lineage, evaluation conditions and publication status. Notebook links in the class deck are local files. Colab repository links and TinyURLs are pending publication; this task does not claim a Git push, Gist or short-link update.
-
-
-Visual update: the class deck contains 26 slides. Four theory tables/text explanations are replaced by plots or a stock-gap diagram. Two instructor-only `Solutions:` plot slides follow the significance table. The student PDF still has 22 pages; the exporter excludes significance, solution plots and Pingo. The same five exercises now display corresponding notebook plots. Analytical rules and results are unchanged.
+One class PowerPoint is the working master. The student PDF excludes significance, all Solutions: slides and Pingo, using the exporter and title rules in chapter.json. The XML/key contain five matching questions. Live Pingo import is untested. Local notebook links are labelled; Colab/Git publication is pending. No native PowerPoint opening or live classroom trial is claimed.

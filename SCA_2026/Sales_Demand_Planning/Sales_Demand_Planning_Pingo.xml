@@ -2,13 +2,13 @@
 <quiz>
   <question type="multichoice">
     <name>
-      <text>SD01 — Verify the planning history</text>
+      <text>SD01 — Read the sales history</text>
     </name>
     <questiontext format="moodle_auto_format">
-      <text>The reviewed calendar contains 208 SKU/weeks, with 198 known sales values and 10 unknowns. The raw export had 206 rows. Which interpretation is justified?</text>
+      <text>Task 1 reveals record details, but 10 weekly sales values remain unknown. A colleague wants to enter zero for all 10 before forecasting. What is the best reply?</text>
     </questiontext>
     <generalfeedback format="moodle_auto_format">
-      <text>The complete calendar defines expected positions, not recovered evidence. Raw records, quarantined conflicts and unknown weeks remain distinct.</text>
+      <text>Unknown sales are not observed zero sales. Showing details does not recover the outcomes; check missing and unresolved source records.</text>
     </generalfeedback>
     <defaultgrade>1</defaultgrade>
     <penalty>0.3333333</penalty>
@@ -17,39 +17,39 @@
     <shuffleanswers>true</shuffleanswers>
     <answernumbering>abc</answernumbering>
     <answer fraction="0" format="moodle_auto_format">
-      <text>All 208 calendar rows are recovered observations</text>
+      <text>Enter zero: an empty sales record confirms no sales.</text>
       <feedback>
-        <text>The complete calendar defines expected positions, not recovered evidence. Raw records, quarantined conflicts and unknown weeks remain distinct.</text>
+        <text>Unknown sales are not observed zero sales. Showing details does not recover the outcomes; check missing and unresolved source records.</text>
       </feedback>
     </answer>
     <answer fraction="100" format="moodle_auto_format">
-      <text>Calendar completion creates missing positions; unknown sales are not confirmed zero sales</text>
+      <text>Keep them unknown and check the source: zero would claim no units were sold.</text>
       <feedback>
-        <text>The complete calendar defines expected positions, not recovered evidence. Raw records, quarantined conflicts and unknown weeks remain distinct.</text>
+        <text>Unknown sales are not observed zero sales. Showing details does not recover the outcomes; check missing and unresolved source records.</text>
       </feedback>
     </answer>
     <answer fraction="0" format="moodle_auto_format">
-      <text>The 10 unknowns prove that those weeks had no demand</text>
+      <text>Use the latest week for all 10: this recovers the missing observations.</text>
       <feedback>
-        <text>The complete calendar defines expected positions, not recovered evidence. Raw records, quarantined conflicts and unknown weeks remain distinct.</text>
+        <text>Unknown sales are not observed zero sales. Showing details does not recover the outcomes; check missing and unresolved source records.</text>
       </feedback>
     </answer>
     <answer fraction="0" format="moodle_auto_format">
-      <text>The review recovered the invalid date automatically</text>
+      <text>Remove the product codes with missing weeks from every comparison.</text>
       <feedback>
-        <text>The complete calendar defines expected positions, not recovered evidence. Raw records, quarantined conflicts and unknown weeks remain distinct.</text>
+        <text>Unknown sales are not observed zero sales. Showing details does not recover the outcomes; check missing and unresolved source records.</text>
       </feedback>
     </answer>
   </question>
   <question type="multichoice">
     <name>
-      <text>SD02 — Compare promotion weeks</text>
+      <text>SD02 — Review a promotion assumption</text>
     </name>
     <questiontext format="moodle_auto_format">
-      <text>With SHOW_PROMO_COMPARISON = True, SKU_A has observed means of 148.43 nonpromo and 263.07 promo units/week, from 86 and 15 weeks. What does the 77.23% observed gap establish?</text>
+      <text>In Task 2, Sales proposes a promotion next week. With the assumed uplift changed from 0% to 20%, SKU_A’s plan rises from 150.33 to 180.40 units. How should the planner describe 180.40?</text>
     </questiontext>
     <generalfeedback format="moodle_auto_format">
-      <text>Counts and observed means describe the data. Timing, price and availability differ; the sales gap alone establishes neither causality nor profit.</text>
+      <text>The original reference stays 150.33. The higher quantity comes from the stated future-promotion assumption; no future sales or accuracy improvement has been observed.</text>
     </generalfeedback>
     <defaultgrade>1</defaultgrade>
     <penalty>0.3333333</penalty>
@@ -58,39 +58,39 @@
     <shuffleanswers>true</shuffleanswers>
     <answernumbering>abc</answernumbering>
     <answer fraction="0" format="moodle_auto_format">
-      <text>A causal 77.23% increase in demand from promotions</text>
+      <text>Sales already recorded for next week.</text>
       <feedback>
-        <text>Counts and observed means describe the data. Timing, price and availability differ; the sales gap alone establishes neither causality nor profit.</text>
+        <text>The original reference stays 150.33. The higher quantity comes from the stated future-promotion assumption; no future sales or accuracy improvement has been observed.</text>
       </feedback>
     </answer>
     <answer fraction="0" format="moodle_auto_format">
-      <text>A 77.23% increase in profit</text>
+      <text>The average observed sales in all earlier promotion weeks.</text>
       <feedback>
-        <text>Counts and observed means describe the data. Timing, price and availability differ; the sales gap alone establishes neither causality nor profit.</text>
+        <text>The original reference stays 150.33. The higher quantity comes from the stated future-promotion assumption; no future sales or accuracy improvement has been observed.</text>
       </feedback>
     </answer>
     <answer fraction="100" format="moodle_auto_format">
-      <text>An observed association between the recorded groups, requiring context before causal or profit claims</text>
+      <text>A plan conditional on the assumed 20% increase for next week’s promotion.</text>
       <feedback>
-        <text>Counts and observed means describe the data. Timing, price and availability differ; the sales gap alone establishes neither causality nor profit.</text>
+        <text>The original reference stays 150.33. The higher quantity comes from the stated future-promotion assumption; no future sales or accuracy improvement has been observed.</text>
       </feedback>
     </answer>
     <answer fraction="0" format="moodle_auto_format">
-      <text>The best promotion price for the product</text>
+      <text>A forecast validated to have lower error than 150.33 units.</text>
       <feedback>
-        <text>Counts and observed means describe the data. Timing, price and availability differ; the sales gap alone establishes neither causality nor profit.</text>
+        <text>The original reference stays 150.33. The higher quantity comes from the stated future-promotion assumption; no future sales or accuracy improvement has been observed.</text>
       </feedback>
     </answer>
   </question>
   <question type="multichoice">
     <name>
-      <text>SD03 — Change the forecast window</text>
+      <text>SD03 — Compare forecast windows</text>
     </name>
     <questiontext format="moodle_auto_format">
-      <text>WINDOW changes from 3 to 6 on the same eligible dates. SKU_A MAE rises from 20.67 to 26.80 units/week over 20 dates; SKU_B rises from 15.00 to 18.75 over only two dates. Which conclusion is strongest?</text>
+      <text>In Task 3, SKU_A validation MAE is 20.83 units/week for MA3 and 36.54 for MA6 on the same 12 weeks. A colleague recommends MA6 because it uses more history. Which reply fits this run?</text>
     </questiontext>
     <generalfeedback format="moodle_auto_format">
-      <text>A has a controlled comparison on 20 dates. B has only two, and cross-product raw MAE rankings do not establish inherent predictability. More smoothing need not improve accuracy.</text>
+      <text>MAE measures average absolute error; smaller is closer. MA3 is better on this validation comparison. The separate final check does not show an improvement over the previous-week benchmark.</text>
     </generalfeedback>
     <defaultgrade>1</defaultgrade>
     <penalty>0.3333333</penalty>
@@ -99,39 +99,39 @@
     <shuffleanswers>true</shuffleanswers>
     <answernumbering>abc</answernumbering>
     <answer fraction="0" format="moodle_auto_format">
-      <text>Six weeks must be better because the forecast is smoother</text>
+      <text>MA6 is more accurate because its MAE is larger.</text>
       <feedback>
-        <text>A has a controlled comparison on 20 dates. B has only two, and cross-product raw MAE rankings do not establish inherent predictability. More smoothing need not improve accuracy.</text>
+        <text>MAE measures average absolute error; smaller is closer. MA3 is better on this validation comparison. The separate final check does not show an improvement over the previous-week benchmark.</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>MA6 is more accurate because six weeks include twice as many observations as three.</text>
+      <feedback>
+        <text>MAE measures average absolute error; smaller is closer. MA3 is better on this validation comparison. The separate final check does not show an improvement over the previous-week benchmark.</text>
       </feedback>
     </answer>
     <answer fraction="100" format="moodle_auto_format">
-      <text>Three weeks has lower MAE for A in this test; B has too little coverage for a strong general conclusion</text>
+      <text>MA3 has lower validation error here; a longer window did not improve accuracy.</text>
       <feedback>
-        <text>A has a controlled comparison on 20 dates. B has only two, and cross-product raw MAE rankings do not establish inherent predictability. More smoothing need not improve accuracy.</text>
+        <text>MAE measures average absolute error; smaller is closer. MA3 is better on this validation comparison. The separate final check does not show an improvement over the previous-week benchmark.</text>
       </feedback>
     </answer>
     <answer fraction="0" format="moodle_auto_format">
-      <text>B is definitely easier to forecast because its MAE is lower</text>
+      <text>Both are equally accurate because they use the same evaluation weeks.</text>
       <feedback>
-        <text>A has a controlled comparison on 20 dates. B has only two, and cross-product raw MAE rankings do not establish inherent predictability. More smoothing need not improve accuracy.</text>
-      </feedback>
-    </answer>
-    <answer fraction="0" format="moodle_auto_format">
-      <text>Different windows were scored against different actual dates</text>
-      <feedback>
-        <text>A has a controlled comparison on 20 dates. B has only two, and cross-product raw MAE rankings do not establish inherent predictability. More smoothing need not improve accuracy.</text>
+        <text>MAE measures average absolute error; smaller is closer. MA3 is better on this validation comparison. The separate final check does not show an improvement over the previous-week benchmark.</text>
       </feedback>
     </answer>
   </question>
   <question type="multichoice">
     <name>
-      <text>SD04 — Change inventory position</text>
+      <text>SD04 — Change the planning horizon</text>
     </name>
     <questiontext format="moodle_auto_format">
-      <text>Reset SKU_A to the latest 3-week forecast and buffer factor 1.0. The target remains 245.52 units. INVENTORY_POSITION changes from 180 to 90; the rounded order rises from 66 to 156. Why?</text>
+      <text>In Task 4, the four-week total is 601.33 units while the weekly estimate stays about 150.33 units. The sales manager asks why the total is larger. Which explanation is correct?</text>
     </questiontext>
     <generalfeedback format="moodle_auto_format">
-      <text>The forecast, buffer and target are fixed. Order is the positive target-minus-position gap rounded upward. The inventory values are teaching scenarios.</text>
+      <text>The run extends the period covered by the total while keeping the weekly sales estimate constant. It does not apply the promotion adjustment or detect a change in sales rate.</text>
     </generalfeedback>
     <defaultgrade>1</defaultgrade>
     <penalty>0.3333333</penalty>
@@ -139,40 +139,40 @@
     <single>true</single>
     <shuffleanswers>true</shuffleanswers>
     <answernumbering>abc</answernumbering>
-    <answer fraction="0" format="moodle_auto_format">
-      <text>Demand increased by 90 units</text>
-      <feedback>
-        <text>The forecast, buffer and target are fixed. Order is the positive target-minus-position gap rounded upward. The inventory values are teaching scenarios.</text>
-      </feedback>
-    </answer>
-    <answer fraction="0" format="moodle_auto_format">
-      <text>Forecast accuracy improved</text>
-      <feedback>
-        <text>The forecast, buffer and target are fixed. Order is the positive target-minus-position gap rounded upward. The inventory values are teaching scenarios.</text>
-      </feedback>
-    </answer>
     <answer fraction="100" format="moodle_auto_format">
-      <text>Less stock is assumed available, so the gap to the same target grows by 90 units</text>
+      <text>We expect about 150.33 units each week and have added four weeks together.</text>
       <feedback>
-        <text>The forecast, buffer and target are fixed. Order is the positive target-minus-position gap rounded upward. The inventory values are teaching scenarios.</text>
+        <text>The run extends the period covered by the total while keeping the weekly sales estimate constant. It does not apply the promotion adjustment or detect a change in sales rate.</text>
       </feedback>
     </answer>
     <answer fraction="0" format="moodle_auto_format">
-      <text>The buffer factor increased</text>
+      <text>We now expect 601.33 units in each of the four weeks.</text>
       <feedback>
-        <text>The forecast, buffer and target are fixed. Order is the positive target-minus-position gap rounded upward. The inventory values are teaching scenarios.</text>
+        <text>The run extends the period covered by the total while keeping the weekly sales estimate constant. It does not apply the promotion adjustment or detect a change in sales rate.</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>The model has detected a fourfold increase in weekly sales.</text>
+      <feedback>
+        <text>The run extends the period covered by the total while keeping the weekly sales estimate constant. It does not apply the promotion adjustment or detect a change in sales rate.</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>The 20% promotion adjustment has been applied four times.</text>
+      <feedback>
+        <text>The run extends the period covered by the total while keeping the weekly sales estimate constant. It does not apply the promotion adjustment or detect a change in sales rate.</text>
       </feedback>
     </answer>
   </question>
   <question type="multichoice">
     <name>
-      <text>SD05 — Change the stock buffer</text>
+      <text>SD05 — Review a forecast against actual sales</text>
     </name>
     <questiontext format="moodle_auto_format">
-      <text>Reset inventory position to 180. BUFFER_FACTOR changes from 1.0 to 1.65, raising the buffer from 95.19 to 157.06 units and the rounded order from 66 to 128. What does this demonstrate?</text>
+      <text>In Task 5, the original forecast is closer at hypothetical actual sales of 150; the +20% forecast is closer at 190. Sales says the 190-unit example proves we should always add 20%. Which reply fits both runs?</text>
     </questiontext>
     <generalfeedback format="moodle_auto_format">
-      <text>The factor changes an assumed policy buffer using historical training sales SD. No lead-time forecast-error calibration, cost optimisation or service guarantee has been established.</text>
+      <text>At 150 actual units, original/adjusted absolute errors are 0.33/30.40; at 190 they are 39.67/9.60. Both forecasts stay fixed. These are hypothetical outcomes, not evidence of a causal promotion effect.</text>
     </generalfeedback>
     <defaultgrade>1</defaultgrade>
     <penalty>0.3333333</penalty>
@@ -181,27 +181,27 @@
     <shuffleanswers>true</shuffleanswers>
     <answernumbering>abc</answernumbering>
     <answer fraction="0" format="moodle_auto_format">
-      <text>A guaranteed 95% service level</text>
+      <text>Yes: a higher actual outcome makes the adjustment accurate in every future week.</text>
       <feedback>
-        <text>The factor changes an assumed policy buffer using historical training sales SD. No lead-time forecast-error calibration, cost optimisation or service guarantee has been established.</text>
+        <text>At 150 actual units, original/adjusted absolute errors are 0.33/30.40; at 190 they are 39.67/9.60. Both forecasts stay fixed. These are hypothetical outcomes, not evidence of a causal promotion effect.</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>No: the original forecast is closer in both examples.</text>
+      <feedback>
+        <text>At 150 actual units, original/adjusted absolute errors are 0.33/30.40; at 190 they are 39.67/9.60. Both forecasts stay fixed. These are hypothetical outcomes, not evidence of a causal promotion effect.</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>Yes: entering 190 proves the promotion caused a 20% sales increase.</text>
+      <feedback>
+        <text>At 150 actual units, original/adjusted absolute errors are 0.33/30.40; at 190 they are 39.67/9.60. Both forecasts stay fixed. These are hypothetical outcomes, not evidence of a causal promotion effect.</text>
       </feedback>
     </answer>
     <answer fraction="100" format="moodle_auto_format">
-      <text>A sensitivity of the illustrative stock rule; the forecast is unchanged and service is not calibrated</text>
+      <text>The adjustment helps in one example and hurts in the other; these outcomes do not justify always adding 20%.</text>
       <feedback>
-        <text>The factor changes an assumed policy buffer using historical training sales SD. No lead-time forecast-error calibration, cost optimisation or service guarantee has been established.</text>
-      </feedback>
-    </answer>
-    <answer fraction="0" format="moodle_auto_format">
-      <text>Proof that the larger order is optimal</text>
-      <feedback>
-        <text>The factor changes an assumed policy buffer using historical training sales SD. No lead-time forecast-error calibration, cost optimisation or service guarantee has been established.</text>
-      </feedback>
-    </answer>
-    <answer fraction="0" format="moodle_auto_format">
-      <text>A measured change in actual customer demand</text>
-      <feedback>
-        <text>The factor changes an assumed policy buffer using historical training sales SD. No lead-time forecast-error calibration, cost optimisation or service guarantee has been established.</text>
+        <text>At 150 actual units, original/adjusted absolute errors are 0.33/30.40; at 190 they are 39.67/9.60. Both forecasts stay fixed. These are hypothetical outcomes, not evidence of a causal promotion effect.</text>
       </feedback>
     </answer>
   </question>

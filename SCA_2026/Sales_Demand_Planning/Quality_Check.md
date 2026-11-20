@@ -1,23 +1,16 @@
-# Sales & Demand Planning — quality checks
+# First-chapter quality check —20November2026
 
-Prepared 1 November 2026. The supplied sources remain unchanged.
+Scope: self-contained Sales & Demand Planning, before the other seven functional chapters. No assumed EDA, inventory, procurement or transportation knowledge. Necessary terms are introduced and the recap restates everyday ideas rather than referring to an earlier chapter.
 
-- One class PowerPoint:26slides. Native Hof cover/course overview/closing, original borderless five-task hands-on table, original three-column significance motif and original Pingo QR951420 retained.
-- Student PDF selection excludes significance slide20, result slides21–22 and Pingo slide23 by case-insensitive title rules, not fixed ranges. Export receipt records the actual selection and deck hash. Expected22pages, no solution link or Pingo access text.
-- Dataset first rows are actual sorted reviewed records. Raw206rows, complete208SKU/week calendar,198known sales and10unknowns. Conflicts, invalid date and negative-sales ambiguity remain disclosed; no inferred zero sales, automatic caps or filled prices.
-- Both notebooks executed in fresh Jupyter kernels; all prescribed starting/change settings checked. Outputs and explanations agree with the result register and significance table. The later SD definition is a Markdown-only clarification; executable cells and outputs remain unchanged.
-- Forecasts use preceding weeks only. A future-actual perturbation test confirms that the same/earlier predictions do not change. Windows3/6and naive use identical eligible dates per SKU. Scored counts A20/B2 are disclosed; B cannot support a strong method ranking.
-- MAE and signed forecast-minus-actual bias displayed. Historical evaluation and next-week forecasting are distinguished. Training-period dispersion is used for the illustrative stock buffer.
-- Inventory/stock scenarios independently reset. Verified orders66→156units for position180→90; factor1→1.65at position180 gives66→128units. No service guarantee or optimality claim is made.
-- Five XML questions parse with four options and one100%answer each; conditions and explanations match the five runs. Live import and session access have not been tested.
-- The shared example register is updated with stable IDs, final task names/settings, results and documented recap/extensions. Material is prepared/validated, not marked taught.
-- Notebook links are local and point to the installed chapter files. Git/Gist/TinyURL publication is pending; no live Colab URL is claimed.
+Both notebooks and all prescribed baseline/change settings executed in fresh kernels. Empty-folder execution passed using the embedded dataset. Independent checks cover known/unknown counts, raw preservation, current/future target leakage, isolation of final data from selection, exact metrics, promotion arithmetic, horizon units/totals and hypothetical-actual error calculations.
 
-Detailed data policy and verified results are in data/. The old treated CSV is not used as ground truth. Price currency/basis and real-company provenance are not established; no revenue/profit conclusion is drawn. Timings and actual classroom understanding were not tested.
+A validation12/final8 split remains. A MA3 validation MAE20.83, final20.42 vs naïve20.38. B coverage2/12 and0/8 limits conclusions. New examples:1/4weeks retain the weekly150.33 reference and total150.33/601.33; actual150/190 changes original/adjusted absolute errors from0.33/30.40 to39.67/9.60. Calculations use unrounded values.
+
+Question wording is grounded in displayed outputs. Five Pingo questions, one marked correct option each. Live import untested. Class/student rendering and source-hash/export checks recorded at release. Colab publication pending; no live classroom or native PowerPoint trial is asserted.
 
 
-Visual update: 26 class slides; 22 student pages. Exclude class slides20–23 by their actual title rules: significance, two Solutions: result plots and Pingo. Both notebooks with promotion/forecast/coverage/stock plots rerun successfully. Original exercise settings, result values and Pingo keys remain unchanged. Introductory chart examples use only the clearly labelled January–February2023 subset; final test results appear only after activities.
+## Editorial review
+Removed lecturer narration and unnecessary repeated captions, including the requested slide3 sentence and calendar-month aside. Omitted three redundant slides. Current deck32 slides; student PDF26 pages. Numerical chart/workbook contents and five task tables unchanged. Only printed wording and one redundant question aside changed in the notebooks; fresh executions and prescribed variants repeated.
 
-
-## Teaching bridge revision, 1 November 2026
-Clarified planner role, sales versus unmet demand, rolling evaluation versus next planning week, a signed/absolute error example, missing-week eligibility, promotion inputs and the completed baseline stock flow. Notebook markdown now states run order and independent resets. Analytical code, task settings, Pingo questions and verified results are unchanged. Colab publication remains pending.
+## Notice, think, explain review
+All five experiments now have three staged prompts grounded in visible outputs and a short sales-planning conversation. Student solutions and five scenario-specific Pingo questions were revised together. Both notebooks, all settings, leakage/selection checks and embedded fallback executed again. XML has five single-answer questions with one correct option each. See Question_Review.md for scope and limitations.
