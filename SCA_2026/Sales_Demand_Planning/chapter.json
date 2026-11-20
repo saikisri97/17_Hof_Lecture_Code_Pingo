@@ -24,13 +24,14 @@
     ]
   },
   "notebook_links": {
-    "student_colab": null,
+    "student_colab": "https://colab.research.google.com/github/saikisri97/17_Hof_Lecture_Code_Pingo/blob/main/SCA_2026/code/Sales_Demand_Planning_Student.ipynb",
     "solution_colab": null,
-    "student_tinyurl": null,
+    "student_tinyurl": "https://tinyurl.com/colabsndstu",
     "solution_tinyurl": null,
     "student_local": "/Users/gollapsi/Documents/17_Hof_Lecture_Code_Pingo/SCA_2026/Sales_Demand_Planning/Sales_Demand_Planning_Student.ipynb",
     "solution_local": "/Users/gollapsi/Documents/17_Hof_Lecture_Code_Pingo/SCA_2026/Sales_Demand_Planning/Sales_Demand_Planning_Student_Solutions.ipynb",
-    "status": "Local files prepared; Colab destinations pending publication. No unpublished URL is claimed live."
+    "status": "Student TinyURL redirect verified; solution link remains local.",
+    "student_link_checked_on": "2026-11-20"
   },
   "dataset": {
     "source": "/Users/gollapsi/Documents/17_Hof_Lecture_Code_Pingo/Supply_Chain_Analytics/data/sales_demand_planning.csv",
@@ -101,7 +102,7 @@
       28,
       29
     ],
-    "class_sha256": "545c6a8c39bb8474b91d917d2614a6cefc8664a3529667873c8d32c128ca6266",
+    "class_sha256": "25fc6c44aa4e7ea6fd30b9684aec1221ad33ae5f2ef311dfea71cc9bb0dbed6a",
     "student_pdf_verified": true,
     "notebook_snapshot_fallback_tested": true,
     "slides_rendered_and_reviewed": true,
