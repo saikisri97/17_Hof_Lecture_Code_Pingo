@@ -1,0 +1,27 @@
+{
+  "concepts": [
+    {
+      "title": "CIPS Procurement Supply Cycle",
+      "url": "https://1prd-dxp.cips.org/en-TT/intelligence-hub/procurement/procurement-supply-cycle"
+    },
+    {
+      "title": "ASCM performance attributes",
+      "url": "https://scor.ascm.org/performance/introduction"
+    },
+    {
+      "title": "CIPS Kraljic matrix",
+      "url": "https://1prd-dxp.cips.org/intelligence-hub/supplier-relationship-management/kraljic-matrix"
+    },
+    {
+      "title": "SAP Supplier Relationship Management",
+      "url": "https://www.sap.com/uk/resources/supplier-relationship-management-srm"
+    }
+  ],
+  "data": "Synthetic, generated locally. No source business observations reused.",
+  "prior_materials_preserved": [
+    "SCA_for_day_7_Procurement & Supplier Management.pptx",
+    "procurement_student_notebook.ipynb",
+    "procurement_po_data.csv",
+    "procurement.xml"
+  ]
+}

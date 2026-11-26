@@ -1,0 +1,107 @@
+[
+  {
+    "id": "procurement.leadtime",
+    "name": "Compare delivery speed and spread",
+    "param": "SUPPLIER",
+    "before": "'A'",
+    "after": "'B'",
+    "call": "show_delivery(orders, supplier=SUPPLIER)",
+    "before_text": "Run Supplier A. Read its mean, spread and delivery-time histogram.",
+    "change": "Change SUPPLIER from A to B. Keep the same completed orders and date range.",
+    "observe": "Compare the histograms using their fixed axes and the two supplier rows.",
+    "questions": [
+      "Which supplier is faster on average, and which has a wider spread of delivery times?",
+      "A buyer says, “B arrives faster, so its timing is more predictable.” Do both parts follow from these outputs?",
+      "Explain the difference between speed and consistency to the buyer using one value for each."
+    ],
+    "answers": [
+      "B is faster: 9.0 days on average versus 10.3 for A. B has wider spread: standard deviation 2.47 days versus 0.91 for A.",
+      "Only the speed claim is supported. B ranges from 5 to 13 days while A ranges from 9 to 12. The larger spread makes B less consistent in this case.",
+      "“B averages 9.0 days, but its timing varies more: spread is 2.47 days versus A’s 0.91. We should discuss both average speed and consistency when reviewing delivery performance.”"
+    ]
+  },
+  {
+    "id": "procurement.deadline",
+    "name": "Read delivery performance against a target",
+    "param": "TARGET_DAYS",
+    "before": "10",
+    "after": "12",
+    "call": "show_target(orders, target_days=TARGET_DAYS)",
+    "before_text": "Use the internal target of 10 days. Read the target percentage and promised-date OTD.",
+    "change": "Change TARGET_DAYS from 10 to 12. Original promises and actual receipts stay fixed.",
+    "observe": "Compare the internal-target bars with the promised-date bars.",
+    "questions": [
+      "Which percentages change when the internal target moves from 10 to 12 days?",
+      "The reported target percentage improves. Have any suppliers actually delivered sooner?",
+      "A colleague wants to tell management that delivery performance improved. Explain what this run really changed."
+    ],
+    "answers": [
+      "Within-target percentages change: A 60% to 100%, B 70% to 90%, C 50% to 70%. Promised-date OTD stays A 90%, B 90%, C 50%.",
+      "No receipt dates change. More existing deliveries fit a more generous internal target.",
+      "“We changed the internal target from 10 to 12 days, so more orders meet it. Delivery dates and performance against the original promised dates have not changed.”"
+    ]
+  },
+  {
+    "id": "procurement.quality",
+    "name": "Compare two quality measures",
+    "param": "QUALITY_VIEW",
+    "before": "'orders'",
+    "after": "'units'",
+    "call": "show_quality(orders, view=QUALITY_VIEW)",
+    "before_text": "Read the percentage of completed orders containing any defective unit.",
+    "change": "Change QUALITY_VIEW from orders to units.",
+    "observe": "Read both denominators in the table and compare the A/B ranking. The chart scale changes with the measure.",
+    "questions": [
+      "Compare A and B: which has fewer flagged orders, and which has the lower defective-unit percentage?",
+      "Why can B have fewer flagged orders but a larger defective-unit percentage? Use the counts in the table.",
+      "A manager calls B “better quality” using only flagged orders. Explain what the second measure adds."
+    ],
+    "answers": [
+      "B has 6/60 flagged orders (10%) versus A’s 12/60 (20%). A has the lower defective-unit percentage: 72/29,940 = 0.2405%, versus B’s 180/29,980 = 0.6004%.",
+      "B has fewer affected orders, but more defective units within those affected orders. Order incidence and the proportion of units defective answer different questions.",
+      "“B has quality incidents on fewer orders, but those incidents contain more defective units overall. We should report both the frequency of affected orders and the defective-unit percentage.”"
+    ]
+  },
+  {
+    "id": "procurement.price",
+    "name": "Compare purchase price and recorded cost",
+    "param": "COST_BASIS",
+    "before": "'purchase'",
+    "after": "'recorded'",
+    "call": "show_cost(orders, basis=COST_BASIS)",
+    "before_text": "Compare purchase prices for the same VALVE20 component in EUR per piece.",
+    "change": "Change COST_BASIS from purchase to recorded.",
+    "observe": "Compare purchase-only and recorded procurement cost per received unit.",
+    "questions": [
+      "Which supplier has the lowest purchase price? Which has the lowest recorded cost per received unit?",
+      "What included costs explain why the ranking changes?",
+      "A colleague says the cheapest quoted supplier must cost the least overall. Explain what the cost table supports and one cost it still leaves out."
+    ],
+    "answers": [
+      "A has the lowest purchase price at EUR 9.00. B has the lowest recorded cost at EUR 10.348/unit, versus A 10.519 and C 10.396.",
+      "Recorded cost adds freight, inspection and rework. A’s low price is offset by higher freight and inspection costs in this synthetic case.",
+      "“A has the lowest purchase price, while B has the lowest cost across the recorded categories. We have not included downtime, financing, administration or later lifecycle costs, so this is not a complete total-cost-of-ownership comparison.”"
+    ]
+  },
+  {
+    "id": "procurement.shortlist",
+    "name": "Screen suppliers and check capacity",
+    "param": "MAX_DEFECTIVE_PCT",
+    "before": "1.0",
+    "after": "0.5",
+    "call": "screen_suppliers(orders, suppliers, max_defective_pct=MAX_DEFECTIVE_PCT)",
+    "before_text": "Apply the 1.0% defective-unit ceiling, Approved status and at least 85% promised-date OTD. July need is 9,000 units.",
+    "change": "Change MAX_DEFECTIVE_PCT from 1.0 to 0.5. Keep all other rules and capacity figures fixed.",
+    "observe": "Read each pass/fail column, the eligible suppliers and total available July capacity.",
+    "questions": [
+      "Which suppliers qualify in each run, and what happens to capacity relative to the July requirement?",
+      "Did the stricter quality ceiling change supplier quality or the buyer’s acceptance rule?",
+      "Write a two-sentence follow-up for procurement: explain why B drops out, what to review with B, and why the remaining shortlist cannot cover July on its own."
+    ],
+    "answers": [
+      "At 1.0%, A and B qualify with 14,000 units of combined capacity. At 0.5%, only A qualifies with 8,000 units, leaving a 1,000-unit gap against July’s 9,000-unit requirement. C fails qualification, delivery and quality in both runs.",
+      "Only the acceptance rule changes. B remains at 0.6004% defective units. Historical quality and available capacity are unchanged.",
+      "“B exceeds the stricter 0.5% ceiling, so procurement should review the defect records, agree a corrective action and track its defective-unit percentage. A alone offers 8,000 units against a need of 9,000, so the buyer must resolve the 1,000-unit gap before committing the sourcing plan.”"
+    ]
+  }
+]

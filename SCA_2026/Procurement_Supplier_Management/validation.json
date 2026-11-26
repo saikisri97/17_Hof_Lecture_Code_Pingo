@@ -1,0 +1,10 @@
+{
+  "date": "2026-11-23",
+  "both_notebooks_fresh_execution": true,
+  "all_prescribed_variants": true,
+  "standalone_execution": true,
+  "raw_preservation": true,
+  "data_business_rules": true,
+  "live_colab": false,
+  "live_pingo_import": false
+}

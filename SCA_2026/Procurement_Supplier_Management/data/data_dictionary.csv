@@ -1,0 +1,21 @@
+Field,Meaning,Definition
+PO_ID,Order reference,Unique order; one product per order
+Supplier,Supplier identifier,"A, B or C"
+Product_Code,Component code,VALVE20
+Product,Component description,20 mm brass valve
+Unit,Quantity unit,piece
+Currency,Price/cost currency,EUR
+PO_Date,Order placement date,YYYY-MM-DD
+Promised_Date,Agreed receipt date,"Original promise, never overwritten by task2"
+Actual_Receipt_Date,Final receipt date,Blank for open or unconfirmed records
+Status,Record status,"Closed, Open, Receipt_unconfirmed"
+Ordered_Qty,Ordered pieces,Positive integer
+Received_Qty,Received pieces,Blank if receipt unknown; short balance cancelled at closure
+Inspected_Qty,Inspected pieces,All received units for closed records
+Defective_Qty,Units failing first inspection,Successfully reworked; zero is observed no defects
+Unit_Price_EUR,EUR per received piece,Same component/specification
+Freight_EUR,Freight amount per order,Separate from price
+Inspection_Cost_EUR,Inspection amount per order,Separate from rework
+Rework_Cost_EUR,Rework amount per order,EUR8 per defective unit
+Qualification,Component approval status,Supplier profile: Approved or Conditional
+Available_Capacity_July_units,Available July pieces,"Hypothetical supplier profile, not annual capacity"
