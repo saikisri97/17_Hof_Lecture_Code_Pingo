@@ -1,2 +1,0 @@
-pypdf>=5
-# LibreOffice or PowerPoint is required for slide rendering.

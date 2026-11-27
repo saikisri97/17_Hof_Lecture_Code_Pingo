@@ -1,4 +1,0 @@
-Week,SKU,Sales_Units,Is_Promo,Price,Week_dt,Review_reason
-2023-13-XX,SKU_B,210,0,19.49,,Invalid date
-2024-01-14,SKU_A,-5,0,14.99,2024-01-14,Conflicting SKU/week records
-2024-01-14,SKU_A,166,0,14.99,2024-01-14,Conflicting SKU/week records
